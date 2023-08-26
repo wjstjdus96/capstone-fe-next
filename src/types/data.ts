@@ -2,7 +2,7 @@ export interface IAnalysisData {
   videoId: string;
   title: string;
   thumbnail: string;
-  percent: string;
+  percent: number;
   top5_text: string[];
   low5_text: string[];
   keyword: string[];
