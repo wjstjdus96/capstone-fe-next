@@ -1,13 +1,17 @@
 "use client";
 
 import { useAnalysisData } from "@/contexts/analysisData";
+import Card from "../Card";
 
 export default function DashBoardBody() {
   const { analysisData } = useAnalysisData();
 
   return (
-    <div className="flex flex-col items-center">
-      {/* <div>{analysisData.thumbnail}</div> */}V
+    <div className="mx-40 flex flex-col items-center py-8 ">
+      <div className=" flex gap-x-8">
+        <Card title="긍정 부정 비율">{analysisData.keyword}</Card>
+        <Card title="긍정 부정 댓글">{analysisData.top5_text}</Card>
+      </div>
     </div>
   );
 }
