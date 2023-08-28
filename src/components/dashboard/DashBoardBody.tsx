@@ -3,6 +3,7 @@
 import { useAnalysisData } from "@/contexts/analysisData";
 import Card from "../Card";
 import DoughnutChart from "./chart/Doughnut";
+import CommentChart from "./chart/CommentChart";
 
 export default function DashBoardBody() {
   const { analysisData } = useAnalysisData();
@@ -13,7 +14,12 @@ export default function DashBoardBody() {
         <Card title="긍정 부정 비율">
           <DoughnutChart percent={analysisData.percent} />
         </Card>
-        <Card title="긍정 부정 댓글">{analysisData.top5_text}</Card>
+        <Card title="긍정 부정 댓글">
+          <CommentChart
+            top_comments={analysisData.top5_text}
+            low_comments={analysisData.low5_text}
+          />
+        </Card>
       </div>
     </div>
   );
