@@ -18,7 +18,7 @@ export const tmpData = [
       "여자 약간발연긔..",
       "아 연기 답답해서 보다끔.. 둘다 연기 공부 더해야될듯",
     ],
-    keyword: ["아이유", "안라낭ㄹ나"],
+    keyword: ["연기", "주인공", "연참", "쓰레기"],
     likes: 58,
     likes_text: ["Sdfasdf"],
     relation_thumbnails: ["hhh"],
