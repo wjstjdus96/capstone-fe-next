@@ -5,6 +5,7 @@ import Card from "../Card";
 import DoughnutChart from "./chart/Doughnut";
 import CommentChart from "./chart/CommentChart";
 import WordCloud from "./chart/WordCloud";
+import LineChart from "./chart/LineChart";
 
 export default function DashBoardBody() {
   const { analysisData } = useAnalysisData();
@@ -26,7 +27,9 @@ export default function DashBoardBody() {
         <Card title="키워드">
           <WordCloud keywords={analysisData.keyword} />
         </Card>
-        <Card title="댓글 작성 시간">{analysisData.time}</Card>
+        <Card title="댓글 작성 시간">
+          <LineChart times={analysisData.time} />
+        </Card>
       </div>
     </div>
   );
