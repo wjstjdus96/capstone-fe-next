@@ -9,7 +9,7 @@ interface IDataContext {
   setAnalysisData: (i: any) => void;
 }
 
-const initialDataContext = {
+const initialDataContext: IDataContext = {
   analysisData: {
     videoId: "",
     title: "",
@@ -18,11 +18,8 @@ const initialDataContext = {
     top5_text: [],
     low5_text: [],
     keyword: [],
-    likes: 0,
-    likes_text: [],
-    relation_thumbnails: [],
-    relation_title: [],
-    relation_id: [],
+    most_likes: [],
+    relation_video: [],
     time: [],
   },
   setAnalysisData: (i: any) => {},
@@ -39,11 +36,8 @@ export function DataContextProvider({ children }: IDataProvider) {
     top5_text: [],
     low5_text: [],
     keyword: [],
-    likes: 0,
-    likes_text: [],
-    relation_thumbnails: [],
-    relation_title: [],
-    relation_id: [],
+    most_likes: [],
+    relation_video: [],
     time: [],
   });
 

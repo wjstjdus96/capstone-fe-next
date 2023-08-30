@@ -10,6 +10,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { ITimes } from "@/types/data";
+import { ILineChart } from "@/types/components";
 
 ChartJS.register(
   CategoryScale,
@@ -20,15 +22,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-interface ITimes {
-  date: string;
-  count: number;
-}
-
-interface ILineChart {
-  times: ITimes[];
-}
 
 export default function LineChart({ times }: ILineChart) {
   const x = times.map((time: ITimes) => time.date);

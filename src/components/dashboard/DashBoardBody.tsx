@@ -23,12 +23,20 @@ export default function DashBoardBody() {
           />
         </Card>
       </div>
-      <div className="w-full flex flex-row gap-x-8">
+      <div className="w-full flex flex-row gap-x-8 mb-8">
         <Card title="키워드" basis={0.2}>
           <WordCloud keywords={analysisData.keyword} />
         </Card>
         <Card title="댓글 작성 시간" basis={0.8}>
           <LineChart times={analysisData.time} />
+        </Card>
+      </div>
+      <div className="w-full flex flex-row gap-x-8">
+        <Card title="좋아요 많은 댓글" basis={0.5}>
+          <div></div>
+        </Card>
+        <Card title="연관동영상" basis={0.5}>
+          <div></div>
         </Card>
       </div>
     </div>

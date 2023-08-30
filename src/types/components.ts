@@ -1,4 +1,4 @@
-import { IAnalysisData } from "./data";
+import { IAnalysisData, ITimes } from "./data";
 
 export interface IExampleBtn {
   data: IAnalysisData;
@@ -6,4 +6,8 @@ export interface IExampleBtn {
 
 export interface IDataProvider {
   children: React.ReactNode;
+}
+
+export interface ILineChart {
+  times: ITimes[];
 }

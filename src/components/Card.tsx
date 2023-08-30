@@ -11,6 +11,7 @@ interface IFlexRow {
 const flexRow: IFlexRow = {
   0: "h-auto w-auto",
   0.2: "h-auto w-auto basis-1/5",
+  0.5: "h-auto w-auto basis-1/2",
   0.8: "h-auto w-auto basis-4/5",
 };
 

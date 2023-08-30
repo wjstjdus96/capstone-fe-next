@@ -6,10 +6,23 @@ export interface IAnalysisData {
   top5_text: string[];
   low5_text: string[];
   keyword: string[];
-  likes: number;
-  likes_text: string[];
-  relation_thumbnails: string[];
-  relation_title: string[];
-  relation_id: string[];
-  time: any;
+  most_likes: ILikes[];
+  relation_video: IRelationVideo[];
+  time: ITimes[];
+}
+
+interface IRelationVideo {
+  id: string;
+  thumbnail: string;
+  title: string;
+}
+
+interface ILikes {
+  count: number;
+  text: string;
+}
+
+export interface ITimes {
+  date: string;
+  count: number;
 }
