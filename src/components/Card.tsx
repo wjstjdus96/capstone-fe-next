@@ -1,11 +1,22 @@
 interface ICard {
   title: string;
   children: React.ReactNode;
+  basis?: number;
 }
 
-export default function Card({ title, children }: ICard) {
+interface IFlexRow {
+  [key: number]: string;
+}
+
+const flexRow: IFlexRow = {
+  0: "h-auto w-auto",
+  0.2: "h-auto w-auto basis-1/5",
+  0.8: "h-auto w-auto basis-4/5",
+};
+
+export default function Card({ title, children, basis }: ICard) {
   return (
-    <div className="h-auto w-auto">
+    <div className={flexRow[basis ? basis : 0]}>
       <div className="px-4 py-3 bg-slate-200 rounded-t-lg font-bold">
         {title}
       </div>
