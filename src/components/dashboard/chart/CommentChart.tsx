@@ -1,4 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
 interface ICommentChart {
   top_comments: string[];
@@ -23,31 +28,48 @@ export default function CommentChart({
   }, [isPositive]);
 
   return (
-    <div>
-      <table className="w-full text-sm text-left text-gray-500">
-        <thead className=" text-gray-700 bg-gray-50">
-          <tr className="border-b border-slate-300">
-            <th className="px-2 py-3">
-              <button
-                data-dropdown-toggle="dropdownRadio"
-                className="inline-flex items-center text-gray-500 text-xs bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5"
-                onClick={changeIsPositive}
-              >
-                {isPositive ? "긍정" : "부정"}
-              </button>
-            </th>
-            <th className="px-6 py-3">내용</th>
-          </tr>
-        </thead>
-        <tbody>
+    <div className="relative">
+      <button
+        data-dropdown-toggle="dropdownRadio"
+        className="absolute inline-flex items-center text-gray-500 text-sm bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5"
+        onClick={changeIsPositive}
+      >
+        {isPositive ? "긍정" : "부정"}
+      </button>
+      <div className="h-auto relative overflow-hidden flex flex-col items-center px-20 [&_.swiper-slide]:flex [&_.swiper-slide]:items-center ">
+        <Swiper
+          direction={"vertical"}
+          height={250}
+          autoHeight={true}
+          loop={true}
+          spaceBetween={30}
+          centeredSlides={true}
+          navigation={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
           {clickedComments.map((comment, idx) => (
-            <tr className="bg-white border-b" key={idx}>
-              <td className="px-6 py-3 font-medium text-gray-900">{idx + 1}</td>
-              <td className="px-6 py-3">{comment}</td>
-            </tr>
+            <SwiperSlide>
+              <div
+                className="w-full bg-white border flex py-5 mr-10 rounded-lg"
+                key={idx}
+              >
+                <div className="px-6 py-3 font-medium text-gray-900">
+                  {idx + 1}
+                </div>
+                <div className="px-6 py-3">{comment}</div>
+              </div>
+            </SwiperSlide>
           ))}
-        </tbody>
-      </table>
+        </Swiper>
+      </div>
     </div>
   );
 }
