@@ -1,4 +1,4 @@
-import { IAnalysisData, ILikes, ITimes } from "./data";
+import { IAnalysisData, ILikes, IRelationVideo, ITimes } from "./data";
 
 export interface IExampleBtn {
   data: IAnalysisData;
@@ -14,4 +14,8 @@ export interface ILineChart {
 
 export interface ILikesTable {
   most_likes: ILikes[];
+}
+
+export interface IRelatedSlider {
+  related: IRelationVideo[];
 }

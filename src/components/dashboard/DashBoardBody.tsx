@@ -2,11 +2,12 @@
 
 import { useAnalysisData } from "@/contexts/analysisData";
 import Card from "../Card";
-import DoughnutChart from "./chart/Doughnut";
+import DoughnutChart from "./chart/DoughnutChart";
 import CommentChart from "./chart/CommentChart";
-import WordCloud from "./chart/WordCloud";
+import WordCloud from "./chart/WordCloudChart";
 import LineChart from "./chart/LineChart";
 import LikesTable from "./chart/LikesTable";
+import RelatedSlider from "./chart/RelatedSlider";
 
 export default function DashBoardBody() {
   const { analysisData } = useAnalysisData();
@@ -36,9 +37,11 @@ export default function DashBoardBody() {
         <Card title="좋아요 많은 댓글" basis={0.5}>
           <LikesTable most_likes={analysisData.most_likes} />
         </Card>
-        <Card title="연관동영상" basis={0.5}>
-          <div></div>
-        </Card>
+        <div className="w-1/2 ">
+          <Card title="연관동영상" basis={0.5}>
+            <RelatedSlider related={analysisData.relation_video} />
+          </Card>
+        </div>
       </div>
     </div>
   );

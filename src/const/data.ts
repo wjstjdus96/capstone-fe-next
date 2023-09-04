@@ -44,10 +44,32 @@ export const tmpData: IAnalysisData[] = [
       },
     ],
     relation_video: [
-      { id: "", thumbnail: "", title: "" },
-      { id: "", thumbnail: "", title: "" },
-      { id: "", thumbnail: "", title: "" },
-      { id: "", thumbnail: "", title: "" },
+      {
+        id: "LUgTC9nC9AY&t=12s",
+        thumbnail:
+          "https://i.ytimg.com/vi/LUgTC9nC9AY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwO3WATeQ7grZDQN4b7dXV-DF1HQ",
+        title:
+          "[EP.98] 400일 기념일에 '조각' 케이크 사온 남친 심리 [연애의 참견3] | KBS Joy 211116 방송",
+      },
+      {
+        id: "DufV-syAQWY&t=1299s",
+        thumbnail:
+          "https://i.ytimg.com/vi/DufV-syAQWY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwO3WATeQ7grZDQN4b7dXV-DF1HQ",
+        title: "연애의 참견 역대급 하남자 모음zip.📁",
+      },
+      {
+        id: "30TfJ6GgFUo",
+        thumbnail:
+          "https://i.ytimg.com/vi/30TfJ6GgFUo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwO3WATeQ7grZDQN4b7dXV-DF1HQ",
+        title: "퇴사하고 싶을 때 특",
+      },
+      {
+        id: "ayarNaLqLnM&t=49s",
+        thumbnail:
+          "https://i.ytimg.com/vi/ayarNaLqLnM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwO3WATeQ7grZDQN4b7dXV-DF1HQ",
+        title:
+          "연락 안 된다고 혼자 상견례 날짜 잡아버리는 시한폭탄 남친 [연애의 참견] | KBS Joy 230530 방송",
+      },
     ],
     time: [
       { date: "22/04", count: 30 },
