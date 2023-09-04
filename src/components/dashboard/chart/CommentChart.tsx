@@ -24,7 +24,6 @@ export default function CommentChart({
 
   return (
     <div>
-      <div></div>
       <table className="w-full text-sm text-left text-gray-500">
         <thead className=" text-gray-700 bg-gray-50">
           <tr className="border-b border-slate-300">

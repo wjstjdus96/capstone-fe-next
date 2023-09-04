@@ -11,13 +11,13 @@ export interface IAnalysisData {
   time: ITimes[];
 }
 
-interface IRelationVideo {
+export interface IRelationVideo {
   id: string;
   thumbnail: string;
   title: string;
 }
 
-interface ILikes {
+export interface ILikes {
   count: number;
   text: string;
 }
