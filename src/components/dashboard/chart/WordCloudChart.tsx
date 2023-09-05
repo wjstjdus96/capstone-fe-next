@@ -17,12 +17,13 @@ export default function WordCloud({ keywords }: IWordCloud) {
       .size([width, height])
       .words(
         keywords.map(function (d) {
-          return { text: d, size: 10 + Math.random() * 90, test: "haha" };
+          return { text: d, size: 20 + Math.random() * 30, test: "haha" };
         })
       )
       .rotate(() => Math.floor(Math.random() * 2))
       .padding(20)
       .font("Impact")
+      .fontWeight("bold")
       .fontSize((d: any) => d.size)
       .on("end", draw)
       .start();
