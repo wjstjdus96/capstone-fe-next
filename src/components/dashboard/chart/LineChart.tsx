@@ -33,8 +33,8 @@ export default function LineChart({ times }: ILineChart) {
       {
         label: "등록 댓글 개수 ",
         data: y,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "#4e73df",
+        backgroundColor: "#2e59d9",
       },
     ],
   };

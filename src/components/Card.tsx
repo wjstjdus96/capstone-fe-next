@@ -10,9 +10,9 @@ interface IFlexRow {
 
 const flexRow: IFlexRow = {
   0: "h-auto w-auto",
-  0.2: "h-auto w-auto basis-1/5",
-  0.5: "h-auto w-auto basis-1/2",
-  0.8: "h-auto w-auto basis-4/5",
+  0.2: "h-auto w-auto basis-1/5 ",
+  0.5: "h-auto w-auto basis-1/2 ",
+  0.8: "h-auto w-auto basis-4/5 ",
 };
 
 export default function Card({ title, children, basis }: ICard) {
@@ -21,7 +21,7 @@ export default function Card({ title, children, basis }: ICard) {
       <div className="px-4 py-3 bg-slate-200 rounded-t-lg font-bold">
         {title}
       </div>
-      <div className="p-5 bg-slate-100 rounded-b-lg">{children} </div>
+      <div className="p-5 bg-slate-100 rounded-b-lg ">{children} </div>
     </div>
   );
 }
