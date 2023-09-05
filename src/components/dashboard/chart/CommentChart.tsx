@@ -36,7 +36,7 @@ export default function CommentChart({
       >
         {isPositive ? "긍정" : "부정"}
       </button>
-      <div className="h-auto relative overflow-hidden flex flex-col items-center px-20 [&_.swiper-slide]:flex [&_.swiper-slide]:items-center ">
+      <div className="h-auto  pointer-events-none relative overflow-hidden flex flex-col items-center px-20 [&_.swiper-slide]:flex [&_.swiper-slide]:items-center ">
         <Swiper
           direction={"vertical"}
           height={250}
