@@ -15,9 +15,9 @@ export default function ExampleBtn({ data }: IExampleBtn) {
     <Link href={`/dashboard/${data.videoId}`}>
       <div
         onClick={onClickButton}
-        className="w-[7rem] h-[7rem] flex justify-center items-center rounded-full bg-zinc-300 cursor-pointer"
+        className="w-[5rem] h-[5rem] flex justify-center items-center rounded-full bg-slate-600 text-white cursor-pointer"
       >
-        <div>예시{data.videoId}</div>
+        <div className="font-bold">Ex {data.videoId}</div>
       </div>
     </Link>
   );
