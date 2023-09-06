@@ -17,8 +17,9 @@ export default function RelatedSlider({ related }: IRelatedSlider) {
   return (
     <div className="w-full h-[300px] p-5 [&_.slick-prev:before]:!text-slate-500 [&_.slick-next:before]:!text-slate-500">
       <Slider {...settings}>
-        {related.map((item) => (
+        {related.map((item, idx) => (
           <RelatedCard
+            key={idx}
             id={item.id}
             thumbnail={item.thumbnail}
             title={item.title}

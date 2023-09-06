@@ -56,7 +56,7 @@ export default function CommentChart({
           className="mySwiper"
         >
           {clickedComments.map((comment, idx) => (
-            <SwiperSlide>
+            <SwiperSlide key={idx}>
               <div
                 className="w-full bg-white border flex py-5 mr-10 rounded-lg"
                 key={idx}

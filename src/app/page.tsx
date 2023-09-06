@@ -38,8 +38,8 @@ export default function Home() {
         </form>
       </div>
       <div className="mx-40 flex justify-evenly">
-        {tmpData.map((item) => (
-          <ExampleBtn data={item} />
+        {tmpData.map((item, idx) => (
+          <ExampleBtn key={idx} data={item} />
         ))}
       </div>
     </div>

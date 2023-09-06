@@ -18,25 +18,6 @@ export default function DoughnutChart({ percent }: IDoughnutChart) {
       },
     ],
   };
-
-  //   const options = {
-  //     maintainAspectRatio: false,
-  //     tooltips: {
-  //       backgroundColor: "rgb(255,255,255)",
-  //       bodyFontColor: "#858796",
-  //       borderColor: "#dddfeb",
-  //       borderWidth: 1,
-  //       xPadding: 15,
-  //       yPadding: 30,
-  //       displayColors: false,
-  //       caretPadding: 10,
-  //     },
-  //     legend: {
-  //       display: false,
-  //     },
-  //     cutoutPercentage: 80,
-  //   };
-
   return (
     <Doughnut
       data={data}
