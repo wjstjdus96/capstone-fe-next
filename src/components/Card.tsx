@@ -18,10 +18,10 @@ const flexRow: IFlexRow = {
 export default function Card({ title, children, basis }: ICard) {
   return (
     <div className={flexRow[basis ? basis : 0]}>
-      <div className="px-4 py-3 bg-slate-200 rounded-t-lg font-bold">
+      <div className="px-4 py-3 bg-[#F4DFC8] rounded-t-lg font-bold">
         {title}
       </div>
-      <div className="p-5 bg-slate-100 rounded-b-lg ">{children} </div>
+      <div className="p-5 bg-[#FAF6F0] rounded-b-lg ">{children} </div>
     </div>
   );
 }

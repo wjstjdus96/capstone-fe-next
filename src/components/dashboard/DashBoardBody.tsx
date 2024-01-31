@@ -13,7 +13,7 @@ export default function DashBoardBody() {
   const { analysisData } = useAnalysisData();
 
   return (
-    <div className="mx-40  flex flex-col items-center py-8 ">
+    <div className="px-40  flex flex-col items-center py-8 bg-[#F4EAE0]">
       <div className="w-full h-[340px] flex gap-x-8 mb-8">
         <Card title="긍정 부정 비율" basis={0.2}>
           <DoughnutChart percent={analysisData.percent} />
