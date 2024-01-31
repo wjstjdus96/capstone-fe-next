@@ -14,7 +14,7 @@ export default function About() {
       <div className="text-white text-5xl font-bold">어떤 서비스인가요?</div>
       <div className="flex flex-col gap-[0.5rem] justify-center items-center py-[3.5rem]">
         {about_card_list.map((card, index) => (
-          <div className=" w-[28rem] relative h-[6rem]">
+          <div key={index} className=" w-[28rem] relative h-[6rem]">
             <div
               className={`bg-white p-[2.3rem] rounded-3xl  h-[6rem] w-[28rem] flex justify-center items-center absolute text-lg ${
                 index % 2 == 0 ? "right-[12rem]" : "left-[12rem]"
