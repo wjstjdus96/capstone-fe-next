@@ -46,6 +46,11 @@ export const analysis_data: IAnalysisData[] = [
       "너 나랑 자려고 계속 만나는 거 모를 줄 알아? [연애의 참견] EP.188 | KBS Joy 230815 방송",
     thumbnail:
       "https://i.ytimg.com/vi/j4HbqwZN2CE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwO3WATeQ7grZDQN4b7dXV-DF1HQ",
+    profileImg:
+      "https://yt3.ggpht.com/wNoNXmOpkCgBiPmx8pusWVLDeXIADKo1MhiYz22JBdpVxzCFII7kbZ9g8ihRh1oRszvrvwetgw=s68-c-k-c0x00ffffff-no-rj",
+    profileName: "KBSjoy",
+    views: "58만회",
+    uploadTime: "5개월 전",
     percent: 40.4,
     top5_text: [
       "18:45 눈물연기 미쳤다.. 나도 슬픔😭😭",
@@ -139,6 +144,11 @@ export const analysis_data: IAnalysisData[] = [
       "11평 신혼집에 살아요 l 주방이 작아서 공간 활용에 신경을 많이 썼어요 l 신당 아파트 전세",
     thumbnail:
       "https://i.ytimg.com/vi/591h-kl9I0w/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwO3WATeQ7grZDQN4b7dXV-DF1HQ",
+    profileImg:
+      "https://yt3.ggpht.com/2a62jMd-ekPzLpi7zPnv7f8_YFlw7qozjDWfOU4g90TgNDM_uKXA65SM9M0WAPwsX3MKCiWW8Fg=s68-c-k-c0x00ffffff-no-rj",
+    profileName: "유부남",
+    views: "30만회",
+    uploadTime: "4개월 전",
     percent: 70.6,
     top5_text: [
       "살림 진짜 야무지게 잘하시는듯~보여주기식이 아니라 더 집중해서 보았습니다.\n좁은공간을 활용해서 저렇게 정리하기가 쉽지않거든요ㅎ",
@@ -219,6 +229,11 @@ export const analysis_data: IAnalysisData[] = [
     title: "오늘도 다시 버티고 보는거야...",
     thumbnail:
       "https://i.ytimg.com/vi/S5BeGGNRsiA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwO3WATeQ7grZDQN4b7dXV-DF1HQ",
+    profileImg:
+      "https://yt3.ggpht.com/ytc/AIf8zZQu56C-kbkPkkcI0OMuRIpDDjShKeMij3RsfxrjIA=s68-c-k-c0x00ffffff-no-rj",
+    profileName: "걍밍경",
+    views: "74만회",
+    uploadTime: "4개월 전",
     percent: 53.4,
     top5_text: [
       "야간수업 마치고 나서 보는 걍밍경은 최고에요 ❤️ 감성 가득한 영상 뒤엔 편집으로 밤을 새는 언니가 있다.. 영앤리치 언니도 밤 새며 열일하니 저도 이번 한 주 열심히 달려보겠습니다!! 항상 신선한 편집으로 즐거움과 편안함을 선사해주셔서 고맙습니다 ❤️",

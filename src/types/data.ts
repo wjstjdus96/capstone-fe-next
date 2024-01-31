@@ -9,6 +9,10 @@ export interface IAnalysisData {
   most_likes: ILikes[];
   relation_video: IRelationVideo[];
   time: ITimes[];
+  profileImg: string;
+  profileName: string;
+  views: string;
+  uploadTime: string;
 }
 
 export interface IRelationVideo {
