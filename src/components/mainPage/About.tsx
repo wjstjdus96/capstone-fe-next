@@ -6,7 +6,7 @@ const about_card_list = [
 ];
 
 const about_detail_description =
-  "TubeAna는 당신의 유튜브 영상을 더 멋있게 만들 수 있도록 도와줍니다. 다양한 분석 결과를 얻어보세요!";
+  "TubeAna는 당신의 유튜브 영상을 더 멋있게 만들 수 있도록 도와줍니다. 분석을 통해 다양한 피드백을 얻어보세요!";
 
 export default function About() {
   return (
@@ -16,7 +16,7 @@ export default function About() {
         {about_card_list.map((card, index) => (
           <div className=" w-[28rem] relative h-[6rem]">
             <div
-              className={`bg-white p-[2.3rem] rounded-3xl  h-[6rem] w-[28rem] flex justify-center items-center absolute ${
+              className={`bg-white p-[2.3rem] rounded-3xl  h-[6rem] w-[28rem] flex justify-center items-center absolute text-lg ${
                 index % 2 == 0 ? "right-[12rem]" : "left-[12rem]"
               }`}
             >
@@ -26,7 +26,9 @@ export default function About() {
         ))}
         <div></div>
       </div>
-      <div className="text-center text-xl">{about_detail_description}</div>
+      <div className="text-center text-2xl mt-[1rem] font-semibold text-white">
+        {about_detail_description}
+      </div>
     </div>
   );
 }

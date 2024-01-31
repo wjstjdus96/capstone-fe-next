@@ -1,4 +1,43 @@
 import { IAnalysisData } from "@/types/data";
+import bar from "../assets/chart-icon/bar-chart.png";
+import card_slider from "../assets/chart-icon/card-slider.png";
+import doughnut from "../assets/chart-icon/doughnut-chart.png";
+import line from "../assets/chart-icon/line-chart.png";
+import priority from "../assets/chart-icon/priority-slider.png";
+import wordcloud from "../assets/chart-icon/wordcloud.png";
+
+export const description_list = [
+  {
+    name: "긍정 부정 비율",
+    sub: "전체 댓글의 긍정 부정 비율을 나타냅니다.",
+    image: doughnut,
+  },
+  {
+    name: "긍정 부정 댓글",
+    sub: "전체 댓글 중 긍정 부정 Top5 댓글을 나타냅니다.",
+    image: priority,
+  },
+  {
+    name: "키워드",
+    sub: "가장 빈번하게 언급된 키워드를 나타냅니다. 글자 크기가 클수록 많이 언급된 것입니다. ",
+    image: wordcloud,
+  },
+  {
+    name: "댓글 작성 시간",
+    sub: "시간대 별 작성된 댓글 개수를 나타냅니다.",
+    image: line,
+  },
+  {
+    name: "좋아요 많은 댓글",
+    sub: "좋아요가 많은 순서대로 댓글을 나타냅니다.",
+    image: bar,
+  },
+  {
+    name: "연관 동영상",
+    sub: "연관 동영상을 나타냅니다. 바로 연관동영상의 분석결과를 볼 수 있습니다.",
+    image: card_slider,
+  },
+];
 
 export const analysis_data: IAnalysisData[] = [
   {
