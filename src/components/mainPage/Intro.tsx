@@ -10,7 +10,7 @@ export default function Intro() {
           <div>새로운 플랫폼</div>
           <div className="text-8xl mt-[2rem] font-bold">TubeAna</div>
         </div>
-        <div className="text-xl self-end font-semibold">바로 분석하러 가기</div>
+        {/* <div className="text-xl self-end font-semibold">바로 분석하러 가기</div> */}
       </div>
       <Image src={bgImage} alt="메인 배경 이미지" />
     </div>
