@@ -1,11 +1,16 @@
-import ExampleBtn from "@/components/ExampleBtn";
-import { tmpData } from "@/const/data";
-import { FiSearch } from "react-icons/fi";
+import About from "@/components/mainPage/About";
+import Description from "@/components/mainPage/Description";
+import Enter from "@/components/mainPage/Enter";
+import Intro from "@/components/mainPage/Intro";
 
 export default function Home() {
   return (
-    <div className="h-full px-40 pt-40 bg-gradient-to-b from-slate-500 to-white-500">
-      <div className="flex flex-col items-center mb-20">
+    <div className="h-full pt-[50px] font-notoKR">
+      <Intro />
+      <About />
+      <Enter />
+      <Description />
+      {/* <div className="flex flex-col items-center mb-20">
         <h1 className="text-5xl text-slate-50 font-bold mb-5">TubeAna</h1>
         <h4 className="text-3xl text-slate-50 font-bold mb-16">
           ( Youtube + Analysis )
@@ -36,12 +41,12 @@ export default function Home() {
             </button>
           </div>
         </form>
-      </div>
-      <div className="mx-40 flex justify-evenly">
+      </div> */}
+      {/* <div className="mx-40 flex justify-evenly">
         {tmpData.map((item, idx) => (
           <ExampleBtn key={idx} data={item} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
