@@ -21,6 +21,10 @@ const initialDataContext: IDataContext = {
     most_likes: [],
     relation_video: [],
     time: [],
+    profileImg: "",
+    profileName: "",
+    views: "",
+    uploadTime: "",
   },
   setAnalysisData: (i: any) => {},
 };
@@ -39,6 +43,10 @@ export function DataContextProvider({ children }: IDataProvider) {
     most_likes: [],
     relation_video: [],
     time: [],
+    profileImg: "",
+    profileName: "",
+    views: "",
+    uploadTime: "",
   });
 
   return (
