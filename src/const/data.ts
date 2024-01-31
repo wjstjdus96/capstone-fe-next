@@ -1,6 +1,6 @@
 import { IAnalysisData } from "@/types/data";
 
-export const tmpData: IAnalysisData[] = [
+export const analysis_data: IAnalysisData[] = [
   {
     videoId: "1",
     title:
