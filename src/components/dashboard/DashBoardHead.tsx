@@ -8,7 +8,7 @@ export default function DashBoardHead() {
   const { analysisData } = useAnalysisData();
 
   return (
-    <div className=" pt-[8rem] pb-[1rem] px-[8rem]  bg-black text-white">
+    <div className=" pt-[8rem] pb-[1rem] px-[8rem]  bg-[#3A4458] text-white">
       <div className="flex gap-[2rem]">
         <img className="w-[20rem] object-cover " src={analysisData.thumbnail} />
         <div>

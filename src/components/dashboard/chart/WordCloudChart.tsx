@@ -46,6 +46,7 @@ export default function WordCloud({ keywords }: IWordCloud) {
           return color();
         })
         .style("fill-opacity", 0.5)
+        .style("font-weight", 700)
         .style("font-family", "Impact")
         .attr("text-anchor", "middle")
         .attr("transform", function (d: any) {
