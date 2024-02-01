@@ -3,7 +3,7 @@ import DashBoardHead from "@/components/dashboard/DashBoardHead";
 
 export default function DashBoard() {
   return (
-    <div>
+    <div className="font-notoKR">
       <DashBoardHead />
       <DashBoardBody />
     </div>
