@@ -8,12 +8,18 @@ interface IDescription {
 
 export default function DescriptionCard({
   description,
+  idx,
 }: {
   description: IDescription;
+  idx: number;
 }) {
   return (
-    <div className="h-[22rem] bg-white text-black rounded-3xl p-[2.5rem]  ">
-      <div className="mb-[2rem] text-center text-3xl font-bold text-[#1D809F]">
+    <div
+      data-aos="zoom-in"
+      data-aos-delay={`${idx * 50}`}
+      className="h-[22rem] bg-white text-black rounded-3xl p-[2.5rem]  "
+    >
+      <div className="mb-[2.5rem] text-center text-3xl font-bold text-[#1D809F]">
         {description.name}
       </div>
       <div className="flex flex-col gap-[2rem] justify-center items-center">
@@ -23,7 +29,7 @@ export default function DescriptionCard({
           width={120}
           height={120}
         />
-        <div className=" text-lg">{description.sub}</div>
+        <div className=" text-sm">{description.sub}</div>
       </div>
     </div>
   );
