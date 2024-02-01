@@ -69,7 +69,7 @@ export default function CommentChart({
                 <div className="px-6 py-3 font-medium text-gray-900">
                   {idx + 1}
                 </div>
-                <div className="px-6 py-3">{comment}</div>
+                <div className="px-6 py-3 text-sm">{comment}</div>
               </div>
             </SwiperSlide>
           ))}
