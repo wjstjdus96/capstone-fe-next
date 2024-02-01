@@ -30,7 +30,7 @@ export default function DashBoardHead() {
       </div>
       <div className="mt-[3rem] flex justify-center items-center">
         <Image src={arrow} alt="아래로 향하는 표시" width={30} />
-        <div className="font-semibold">이 영상에 대한 분석 내용</div>
+        <div>이 영상에 대한 분석 내용</div>
         <Image src={arrow} alt="아래로 향하는 표시" width={30} />
       </div>
     </div>
