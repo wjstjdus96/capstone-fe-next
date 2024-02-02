@@ -16,7 +16,9 @@ export default function About() {
         {about_card_list.map((card, index) => (
           <div
             key={index}
-            data-aos="flip-left"
+            data-aos={`${index % 2 == 0 ? "flip-right" : "flip-left"}`}
+            data-aos-duration="700"
+            data-aos-easing="linear"
             className=" w-[28rem] relative h-[6rem]"
           >
             <div

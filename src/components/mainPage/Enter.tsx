@@ -16,7 +16,11 @@ export default function Enter() {
         />
       </div>
       <div className="flex flex-col justify-center items-center gap-[1.5rem]">
-        <h4 data-aos="fade-up" className="text-[#F2E8C6] text-lg">
+        <h4
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          className="text-[#F2E8C6] text-lg"
+        >
           # 현재 프론트엔드만 구현된 상태로 결과물은 예시를 통해서 확인해주세요
         </h4>
         <ul data-aos="fade-up" className="flex gap-[1rem]">

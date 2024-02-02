@@ -16,10 +16,11 @@ export default function DescriptionCard({
   return (
     <div
       data-aos="zoom-in"
-      data-aos-delay={`${idx * 50}`}
+      data-aos-delay={`${idx * 100}`}
+      data-aos-easing="linear"
       className="h-[22rem] bg-white text-black rounded-3xl p-[2.5rem]  "
     >
-      <div className="mb-[2.5rem] text-center text-3xl font-bold text-[#1D809F]">
+      <div className="mb-[2.5rem] text-center text-2xl font-bold text-[#1D809F]">
         {description.name}
       </div>
       <div className="flex flex-col gap-[2rem] justify-center items-center">
