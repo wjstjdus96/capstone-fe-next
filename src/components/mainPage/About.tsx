@@ -21,12 +21,13 @@ export default function About({
           <div
             key={index}
             data-aos={`${index % 2 == 0 ? "flip-right" : "flip-left"}`}
-            data-aos-duration="700"
             data-aos-easing="linear"
-            className=" w-[28rem] relative h-[6rem]"
+            data-aos-delay={`${index * 50}`}
+            id={`${index == 3 && "last-card"}`}
+            className=" w-[28rem] relative h-[5rem]"
           >
             <div
-              className={`bg-white p-[2.3rem] rounded-3xl  h-[6rem] w-[28rem] flex justify-center items-center absolute text-md ${
+              className={`bg-white p-[2.3rem] rounded-3xl  h-[5rem] w-[28rem] flex justify-center items-center absolute text-md ${
                 index % 2 == 0 ? "right-[12rem]" : "left-[12rem]"
               }`}
             >
@@ -35,7 +36,14 @@ export default function About({
           </div>
         ))}
       </div>
-      <div className="text-center text-2xl font-semibold text-white">
+      <div
+        data-aos="fade-in"
+        data-aos-anchor-placement="center-bottom"
+        data-aos-easing="linear"
+        data-aos-anchor="#last-card"
+        data-aos-delay="800"
+        className="text-center text-xl  text-black mt-[1rem]"
+      >
         {about_detail_description}
       </div>
     </div>

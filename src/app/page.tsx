@@ -17,7 +17,7 @@ export default function Home() {
     useMoveScroll();
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({ duration: 700 });
   });
 
   return (
@@ -28,7 +28,7 @@ export default function Home() {
         onClickDescription={moveToDescription}
       />
 
-      <Intro />
+      <Intro onClickEnter={moveToEnter} />
       <About aboutRef={aboutRef} />
       <Enter enterRef={enterRef} />
       <Description descriptionRef={descriptionRef} />

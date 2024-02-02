@@ -16,7 +16,7 @@ export default function ExampleBtn({ data }: IExampleBtn) {
   return (
     <li
       onClick={() => onClickButton(data.videoId)}
-      className="p-[1rem] bg-[#F2E8C6] rounded-3xl text-[#D83636] cursor-pointer"
+      className="py-[0.3rem] px-[1rem] bg-[#F2E8C6] rounded-3xl text-[#D83636] cursor-pointer"
     >
       <p className="font-bold">예시 {data.videoId}</p>
     </li>
