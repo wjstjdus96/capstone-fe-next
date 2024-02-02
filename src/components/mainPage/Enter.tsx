@@ -1,9 +1,16 @@
 import { analysis_data } from "@/const/data";
 import ExampleBtn from "../ExampleBtn";
 
-export default function Enter() {
+export default function Enter({
+  enterRef,
+}: {
+  enterRef: React.ForwardedRef<HTMLDivElement>;
+}) {
   return (
-    <div className="h-[70vh] bg-[#D83636] p-[2rem] text-white">
+    <div
+      ref={enterRef}
+      className="h-[70vh]  pt-[50px] bg-[#D83636] p-[2rem] text-white"
+    >
       <div className="text-5xl font-bold">분석해보세요!</div>
       <div className="my-[4rem] flex flex-col justify-center items-center gap-[2rem] ">
         <h2 className="text-3xl">영상의 URL을 입력해주세요</h2>

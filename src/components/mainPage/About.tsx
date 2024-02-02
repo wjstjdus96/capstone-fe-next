@@ -8,9 +8,13 @@ const about_card_list = [
 const about_detail_description =
   "TubeAna는 당신의 유튜브 영상을 더 멋있게 만들 수 있도록 도와줍니다. 분석을 통해 다양한 피드백을 얻어보세요!";
 
-export default function About() {
+export default function About({
+  aboutRef,
+}: {
+  aboutRef: React.ForwardedRef<HTMLDivElement>;
+}) {
   return (
-    <div className="h-[95vh] bg-[#FCBF49] p-[2rem]">
+    <div ref={aboutRef} className="h-[95vh] pt-[50px] bg-[#FCBF49] p-[2rem]">
       <div className="text-white text-5xl font-bold">어떤 서비스인가요?</div>
       <div className="flex flex-col gap-[0.5rem] justify-center items-center py-[3.5rem]">
         {about_card_list.map((card, index) => (

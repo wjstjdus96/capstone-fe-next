@@ -3,7 +3,7 @@ import bgImage from "../../assets/bg-analysis.jpg";
 
 export default function Intro() {
   return (
-    <div className="h-[85vh] flex">
+    <div className="h-[90vh] pt-[50px] w-full flex overflow-hidden">
       <div className="p-[5rem] bg-black text-white flex flex-col justify-between">
         <div className="text-4xl flex flex-col gap-[1.2rem]">
           <div>유튜브 댓글 분석을 위한</div>
@@ -12,7 +12,7 @@ export default function Intro() {
         </div>
         <div className="text-xl self-end font-semibold">바로 분석하러 가기</div>
       </div>
-      <Image src={bgImage} alt="메인 배경 이미지" />
+      <Image className="" src={bgImage} alt="메인 배경 이미지" />
     </div>
   );
 }

@@ -7,18 +7,31 @@ import Intro from "@/components/mainPage/Intro";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Header from "@/components/Header";
+import useMoveScroll from "@/hooks/useMoveScroll";
 
 export default function Home() {
+  const { element: aboutRef, onMoveToElement: moveToAbout } = useMoveScroll();
+  const { element: enterRef, onMoveToElement: moveToEnter } = useMoveScroll();
+  const { element: descriptionRef, onMoveToElement: moveToDescription } =
+    useMoveScroll();
+
   useEffect(() => {
     AOS.init();
   });
 
   return (
-    <div className="h-full pt-[50px] font-notoKR">
+    <div className="h-full font-notoKR">
+      <Header
+        onClickAbout={moveToAbout}
+        onClickEnter={moveToEnter}
+        onClickDescription={moveToDescription}
+      />
+
       <Intro />
-      <About />
-      <Enter />
-      <Description />
+      <About aboutRef={aboutRef} />
+      <Enter enterRef={enterRef} />
+      <Description descriptionRef={descriptionRef} />
     </div>
   );
 }
