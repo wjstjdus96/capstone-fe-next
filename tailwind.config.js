@@ -17,10 +17,19 @@ module.exports = {
           from: { transform: "translateY(3em)", opacity: "1" },
           to: { transform: "translateY(0)", opacity: "1" },
         },
+        spinner: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
       },
       animation: {
         typingCursor: "typingCursor 0.8s ease-in-out 0ms 6",
         fontGrow: "fontGrow 1s 2.5s linear forwards ",
+        spinnerRotation: "spinner 1s linear infinite",
       },
     },
   },

@@ -18,7 +18,7 @@ export default function Intro({ onClickEnter }: { onClickEnter: () => void }) {
           data-aos="fade-right"
           data-aos-delay="2700"
           onClick={onClickEnter}
-          className="text-xl self-end font-semibold hover:font-bold hover:text-[#D83636] cursor-pointer hover:transition-colors"
+          className="text-xl self-end font-semibold hover:font-bold hover:text-[#D83636] cursor-pointer hover:transition-all hover:ease-in hover:duration-700"
         >
           바로 분석하러 가기
         </div>
