@@ -15,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
         <DataContextProvider>{children}</DataContextProvider>
       </body>
     </html>
