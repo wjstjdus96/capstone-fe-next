@@ -1,12 +1,4 @@
-interface ICard {
-  title: string;
-  children: React.ReactNode;
-  basis?: number;
-}
-
-interface IFlexRow {
-  [key: number]: string;
-}
+import { ICard, IFlexRow } from "@/types/components";
 
 const flexRow: IFlexRow = {
   0: "h-auto w-auto",

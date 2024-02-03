@@ -1,6 +1,5 @@
 import { DataContextProvider } from "@/contexts/analysisData";
 import "../styles/globals.css";
-import Header from "@/components/Header";
 
 export const metadata = {
   title: "TubeAna",

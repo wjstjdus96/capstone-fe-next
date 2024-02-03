@@ -10,6 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { IDoughnutChart } from "@/types/components";
 
 ChartJS.register(
   CategoryScale,
@@ -20,10 +21,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-interface IDoughnutChart {
-  percent: number;
-}
 
 export default function DoughnutChart({ percent }: IDoughnutChart) {
   const data = {
@@ -45,31 +42,6 @@ export default function DoughnutChart({ percent }: IDoughnutChart) {
   const options = {
     maintainAspectRatio: false,
     responsive: true,
-    // plugins: {
-    //   datalabels: {
-    //     enabled: false,
-    //     color: "black",
-    //     anchor: "end",
-    //     clamp: true,
-    //     clip: true,
-    //     align: "-135",
-    //     offset: 1,
-    //     formatter: function (value: any, context: any) {
-    //       let result = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    //       return result + "원";
-    //     },
-    //   },
-    //   tooltip: {
-    //     enabled: true,
-    //     intersect: false,
-    //     callbacks: {
-    //       label: function (context: any) {
-    //         let label = data.labels[context.datasetIndex];
-    //         return label + ",  " + context.parsed.x + ",  " + context.parsed.y;
-    //       },
-    //     },
-    //   },
-    // },
   };
 
   return <Doughnut data={data} width={250} height={250} options={options} />;

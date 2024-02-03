@@ -1,10 +1,7 @@
+import { IWordCloud } from "@/types/components";
 import * as d3 from "d3";
 import cloud from "d3-cloud";
 import { useEffect } from "react";
-
-interface IWordCloud {
-  keywords: string[];
-}
 
 export default function WordCloud({ keywords }: IWordCloud) {
   const width = 300;

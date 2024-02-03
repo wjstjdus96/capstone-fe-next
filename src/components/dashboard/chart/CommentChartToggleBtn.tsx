@@ -1,15 +1,4 @@
-interface ICommentChartToggleBtn {
-  isPositive: boolean;
-  handleIsPositive: () => void;
-}
-
-const di = {
-  default: "before:flex before:absolute before:[]",
-  positiveAfter: "",
-  positiveBefor: "",
-  negativeAfter: "",
-  negativeBefore: "",
-};
+import { ICommentChartToggleBtn } from "@/types/components";
 
 export default function CommentChartToggleBtn({
   isPositive,

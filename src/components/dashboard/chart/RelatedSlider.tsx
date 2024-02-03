@@ -1,8 +1,7 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { IRelatedSlider } from "@/types/components";
-import React, { useCallback, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import RelatedCard from "./RelatedCard";
 
 export default function RelatedSlider({ related }: IRelatedSlider) {

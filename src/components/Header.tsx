@@ -1,12 +1,7 @@
 "use client";
 
+import { IHeader } from "@/types/components";
 import { useRouter, usePathname } from "next/navigation";
-
-interface IHeader {
-  onClickAbout?: () => void;
-  onClickEnter?: () => void;
-  onClickDescription?: () => void;
-}
 
 export default function Header({
   onClickAbout,

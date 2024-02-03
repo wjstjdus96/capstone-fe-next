@@ -1,12 +1,5 @@
-const about_card_list = [
-  { cardBody: "영상에 대한 자세한 피드백을 받고 싶으신가요?" },
-  { cardBody: "구독자가 많아 댓글을 하나하나 보기 힘드신가요?" },
-  { cardBody: "댓글의 실시간 분위기를 보고 싶으신가요?" },
-  { cardBody: "비슷한 다른 영상의 분석 결과를 얻고 싶으신가요?" },
-];
-
-const about_detail_description =
-  "TubeAna는 당신의 유튜브 영상을 더 멋있게 만들 수 있도록 도와줍니다. 분석을 통해 다양한 피드백을 얻어보세요!";
+import { about_detail_description } from "@/const/const";
+import { about_card_list } from "@/const/data";
 
 export default function About({
   aboutRef,

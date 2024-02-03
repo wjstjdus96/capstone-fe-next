@@ -1,10 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-
-interface IDescription {
-  name: string;
-  sub: string;
-  image: StaticImageData;
-}
+import { IDescription } from "@/types/components";
+import Image from "next/image";
 
 export default function DescriptionCard({
   description,

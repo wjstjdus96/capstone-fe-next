@@ -5,11 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import CommentChartToggleBtn from "./CommentChartToggleBtn";
-
-interface ICommentChart {
-  top_comments: string[];
-  low_comments: string[];
-}
+import { ICommentChart } from "@/types/components";
 
 export default function CommentChart({
   top_comments,
