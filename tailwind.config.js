@@ -13,9 +13,14 @@ module.exports = {
           },
           to: { borderRight: "2px solid black" },
         },
+        fontGrow: {
+          from: { transform: "translateY(3em)", opacity: "1" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
       },
       animation: {
-        typingCursor: "typingCursor 1s ease-in-out 0ms 2",
+        typingCursor: "typingCursor 0.8s ease-in-out 0ms 6",
+        fontGrow: "fontGrow 1s 2.5s linear forwards ",
       },
     },
   },

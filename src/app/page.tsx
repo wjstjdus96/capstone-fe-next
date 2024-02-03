@@ -21,13 +21,12 @@ export default function Home() {
   });
 
   return (
-    <div className="h-full font-notoKR">
+    <div className="h-full font-notoKR ">
       <Header
         onClickAbout={moveToAbout}
         onClickEnter={moveToEnter}
         onClickDescription={moveToDescription}
       />
-
       <Intro onClickEnter={moveToEnter} />
       <About aboutRef={aboutRef} />
       <Enter enterRef={enterRef} />

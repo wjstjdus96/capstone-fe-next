@@ -20,7 +20,7 @@ export default function About({
         {about_card_list.map((card, index) => (
           <div
             key={index}
-            data-aos={`${index % 2 == 0 ? "flip-right" : "flip-left"}`}
+            data-aos={`${index % 2 == 0 ? "fade-right" : "fade-left"}`}
             data-aos-easing="linear"
             data-aos-delay={`${index * 50}`}
             id={`${index == 3 && "last-card"}`}

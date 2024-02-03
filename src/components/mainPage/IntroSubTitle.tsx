@@ -18,11 +18,16 @@ export default function IntroSubTitle() {
         setCount((prev) => prev + 1);
         return result;
       });
-    }, 150);
+    }, 100);
+
     return () => {
       clearInterval(timer);
     };
   });
 
-  return <div className="leading-[3.5rem]">{landingTitle}</div>;
+  return (
+    <div className="leading-[3.5rem] inline animate-typingCursor">
+      {landingTitle}
+    </div>
+  );
 }
