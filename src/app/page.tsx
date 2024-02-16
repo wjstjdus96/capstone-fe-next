@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "@/components/Header";
 import useMoveScroll from "@/hooks/useMoveScroll";
+import PopularVideos from "@/components/mainPage/PopularVideos ";
 
 export default function Home() {
   const { element: aboutRef, onMoveToElement: moveToAbout } = useMoveScroll();
@@ -31,6 +32,7 @@ export default function Home() {
       <About aboutRef={aboutRef} />
       <Enter enterRef={enterRef} />
       <Description descriptionRef={descriptionRef} />
+      <PopularVideos />
     </div>
   );
 }
