@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import VideoItemList from "./VideoItemList";
 
 export default function PopularVideos() {
   return (
@@ -6,7 +7,7 @@ export default function PopularVideos() {
       <h2 className="text-white text-5xl font-bold">
         인기 동영상을 분석해보세요!
       </h2>
-      <ul></ul>
+      <VideoItemList />
     </div>
   );
 }
