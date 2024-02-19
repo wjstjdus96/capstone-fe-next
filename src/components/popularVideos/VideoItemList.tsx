@@ -8,15 +8,18 @@ const fetchVideos = async () => {
   return res.json();
 };
 
-export default async function VideoItemList() {
+export const VideoItemList = async () => {
   const data = await fetchVideos();
+
   console.log(data.items);
 
   return (
     <ul>
       {data.items.map((item: any) => (
-        <li></li>
+        <li>{item.snippet.title}</li>
       ))}
     </ul>
   );
-}
+};
+
+export default VideoItemList;

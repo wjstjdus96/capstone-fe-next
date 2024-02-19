@@ -1,13 +1,9 @@
 import { about_detail_description } from "@/const/const";
 import { about_card_list } from "@/const/data";
 
-export default function About({
-  aboutRef,
-}: {
-  aboutRef: React.ForwardedRef<HTMLDivElement>;
-}) {
+export default function About() {
   return (
-    <div ref={aboutRef} className="h-[95vh] pt-[50px] bg-[#FCBF49] p-[2rem]">
+    <div className="h-[95vh] pt-[50px] bg-[#FCBF49] p-[2rem]">
       <div className="text-white text-5xl font-bold">어떤 서비스인가요?</div>
       <div className="flex flex-col gap-[0.5rem] justify-center items-center py-[3.5rem]">
         {about_card_list.map((card, index) => (

@@ -1,5 +1,5 @@
 import { analysis_data } from "@/const/data";
-import ExampleBtn from "../ExampleBtn";
+import ExampleBtn from "./ExampleBtn";
 
 export default function Enter({
   enterRef,
