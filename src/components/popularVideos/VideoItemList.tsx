@@ -1,3 +1,5 @@
+import VideoItem from "./VideoItem";
+
 const fetchVideos = async () => {
   const res = await fetch(
     "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&regionCode=KR&key=AIzaSyC6yTlfN6VPRPV9VYV9C_VVwQLDvK78sUg",
@@ -11,12 +13,10 @@ const fetchVideos = async () => {
 export const VideoItemList = async () => {
   const data = await fetchVideos();
 
-  console.log(data.items);
-
   return (
-    <ul>
-      {data.items.map((item: any) => (
-        <li>{item.snippet.title}</li>
+    <ul className="my-[3rem] flex flex-col items-center">
+      {data.items.map((item: any, idx: number) => (
+        <VideoItem item={item.snippet} idx={idx + 1} />
       ))}
     </ul>
   );
