@@ -1,6 +1,6 @@
 export default function VideoItem({ item, idx }: { item: any; idx: number }) {
   return (
-    <li className="group w-3/5">
+    <li className="group">
       <div className="flex gap-[1rem] py-[1rem] px-[2rem] bg-white rounded-3xl">
         <h1>#{idx}</h1>
         <h2>{item.title}</h2>
