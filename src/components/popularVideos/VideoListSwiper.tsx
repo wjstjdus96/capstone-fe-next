@@ -11,7 +11,7 @@ export default function VideoListSwiper({ children }: { children: any }) {
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToScroll: 3,
     vertical: true,
     autoplay: false,
   };

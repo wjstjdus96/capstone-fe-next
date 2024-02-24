@@ -1,11 +1,11 @@
 export default function VideoItem({ item, idx }: { item: any; idx: number }) {
   return (
-    <li className="group">
+    <li className="group w-full">
       <div className="flex gap-[1rem] py-[1rem] px-[2rem] bg-white rounded-3xl">
         <h1>#{idx}</h1>
         <h2>{item.title}</h2>
       </div>
-      <div className="flex gap-[1rem] p-[1rem] h-0 opacity-0 group-hover:animate-videoListDetail">
+      <div className="flex gap-[1rem] p-[1rem] h-0 opacity-0 group-hover:h-[120px] group-hover:opacity-100 transition-all">
         <img
           src={item.thumbnails.medium.url}
           className="w-[160px] object-cover"
