@@ -25,13 +25,18 @@ module.exports = {
             transform: "rotate(360deg)",
           },
         },
+        videoListDetail: {
+          from: { opacity: 0, height: "0px" },
+          to: { opacity: 1, height: "120px" },
+        },
       },
       animation: {
         typingCursor: "typingCursor 0.8s ease-in-out 0ms 6",
         fontGrow: "fontGrow 1s 2.5s linear forwards ",
         spinnerRotation: "spinner 1s linear infinite",
+        videoListDetail: "videoListDetail 0.3s ease forwards",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-3d")({ legacy: true })],
 };

@@ -1,7 +1,7 @@
 "use client";
 
 import { useAnalysisData } from "@/contexts/analysisData";
-import Card from "../Card";
+import Card from "./Card";
 import DoughnutChart from "./chart/DoughnutChart";
 import CommentChart from "./chart/CommentChart";
 import WordCloud from "./chart/WordCloudChart";
