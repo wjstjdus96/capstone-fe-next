@@ -13,7 +13,8 @@ export default function Intro({ onClickEnter }: { onClickEnter: () => void }) {
         <h2 className={styles.title}>TubeAna</h2>
       </div>
       <button className={styles.button} onClick={onClickEnter}>
-        분석하러 가기
+        <span>분석하러 가기</span>
+        <div className={styles.buttonWave}></div>
       </button>
     </div>
   );
