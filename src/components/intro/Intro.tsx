@@ -4,7 +4,7 @@ import IntroSubTitle from "./IntroSubTitle";
 
 export default function Intro({ onClickEnter }: { onClickEnter: () => void }) {
   return (
-    <div className="h-[90vh] pt-[50px] flex">
+    <div className="h-[100vh] flex">
       <div className="p-[5rem] bg-black text-white flex flex-col justify-between">
         <div className="text-4xl">
           <IntroSubTitle />

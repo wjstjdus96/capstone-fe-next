@@ -1,5 +1,4 @@
 import VideoItem from "./VideoItem";
-import VideoListSwiper from "./VideoListSwiper";
 
 const fetchVideos = async () => {
   const res = await fetch(
