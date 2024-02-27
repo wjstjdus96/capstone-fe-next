@@ -9,9 +9,6 @@ export default function About() {
         {about_card_list.map((card, index) => (
           <div
             key={index}
-            data-aos={`${index % 2 == 0 ? "fade-right" : "fade-left"}`}
-            data-aos-easing="linear"
-            data-aos-delay={`${index * 50}`}
             id={`${index == 3 && "last-card"}`}
             className=" w-[28rem] relative h-[5rem]"
           >
@@ -25,15 +22,28 @@ export default function About() {
           </div>
         ))}
       </div>
-      <div
-        data-aos="fade-in"
-        data-aos-anchor-placement="center-bottom"
-        data-aos-easing="linear"
-        data-aos-anchor="#last-card"
-        data-aos-delay="800"
-        className="text-center text-xl  text-black mt-[1rem]"
-      >
+      <div className="text-center text-xl  text-black mt-[1rem]">
         {about_detail_description}
+      </div>
+      <div className="w-[3rem]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          id="question-mark"
+        >
+          <g data-name="Layer 2">
+            <g data-name="question-mark">
+              <rect
+                width="24"
+                height="24"
+                opacity="0"
+                transform="rotate(180 12 12)"
+              ></rect>
+              <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
+              <circle cx="12" cy="19" r="1"></circle>
+            </g>
+          </g>
+        </svg>
       </div>
     </div>
   );

@@ -16,7 +16,6 @@ $light: #e8e8e9;
   overflow: hidden;
   position: relative;
 
-  // === Background Shape ======
   &::before {
     content: "";
     display: block;
@@ -54,6 +53,7 @@ $light: #e8e8e9;
   animation: revealText $duration + ms forwards ($delay + 100) + ms;
 }
 
+//버튼
 .button {
   position: absolute;
   right: 12%;
@@ -61,7 +61,7 @@ $light: #e8e8e9;
   padding: 10px 20px;
   border-radius: 10px;
   opacity: 0;
-  animation: revealDot 300ms linear forwards (($delay) + $delay * 2) + ms;
+  animation: revealOpacity 300ms linear forwards (($delay) + $delay * 2) + ms;
   overflow: hidden;
   span {
     position: relative;
@@ -112,6 +112,58 @@ $light: #e8e8e9;
   }
 }
 
+//스크롤
+.scrollWrapper {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  animation: revealOpacity 300ms linear forwards (($delay) + $delay * 3) + ms;
+  & > div {
+    position: relative;
+    height: 100px;
+  }
+}
+
+.scrollArrow {
+  span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 2px solid $dark;
+    border-bottom: 2px solid $dark;
+    transform: rotate(-45deg);
+    animation: revealScrollArrow 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  span:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  span:nth-of-type(2) {
+    top: 16px;
+    animation-delay: 0.15s;
+  }
+  span:nth-of-type(3) {
+    top: 32px;
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes revealScrollArrow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes revealBG {
   from {
     transform: skewX($angle + deg) translateX(-100%) scaleX(0);
@@ -121,7 +173,7 @@ $light: #e8e8e9;
   }
 }
 
-@keyframes revealDot {
+@keyframes revealOpacity {
   from {
     opacity: 0;
     transform: scale(0);

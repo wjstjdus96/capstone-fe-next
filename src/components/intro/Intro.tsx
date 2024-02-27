@@ -2,6 +2,7 @@ import Image from "next/image";
 import bgImage from "../../assets/bg-analysis.jpg";
 import IntroSubTitle from "./IntroSubTitle";
 import styles from "../../styles/intro.module.scss";
+import IntroScrollArrow from "./IntroScrollArrow";
 
 export default function Intro({ onClickEnter }: { onClickEnter: () => void }) {
   return (
@@ -16,6 +17,9 @@ export default function Intro({ onClickEnter }: { onClickEnter: () => void }) {
         <span>분석하러 가기</span>
         <div className={styles.buttonWave}></div>
       </button>
+      <div className={styles.scrollWrapper}>
+        <IntroScrollArrow />
+      </div>
     </div>
   );
 }
