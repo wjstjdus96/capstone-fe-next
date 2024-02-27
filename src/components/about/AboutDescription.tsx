@@ -1,31 +1,27 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import styles from "../../styles/about.module.scss";
 
 export default function AboutDescription() {
-  const completedSubTitle = "TubeAna로 경험해보세요!";
+  const completedText = "TubeAna로 해결해보세요!";
   const [landingTitle, setLandingTitle] = useState("");
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (count >= completedSubTitle.length) {
+    if (count >= completedText.length) {
       return;
     }
 
-    const timer = setInterval(() => {
+    const typingInterval = setInterval(() => {
       setLandingTitle((prev) => {
-        let result = prev
-          ? prev + completedSubTitle[count]
-          : completedSubTitle[0];
-        setCount((prev) => prev + 1);
+        console.log(count);
+        let result = prev ? prev + completedText[count] : completedText[0];
+        setCount(count + 1);
+
         return result;
       });
-    }, 300);
+    }, 100);
 
-    return () => {
-      clearInterval(timer);
-    };
+    return () => clearInterval(typingInterval);
   });
 
   return <div className={styles.description}>{landingTitle}</div>;
