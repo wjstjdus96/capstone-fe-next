@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import styles from "../../styles/about.module.scss";
 
-export default function IntroSubTitle() {
-  const completedSubTitle = "유튜브 댓글 분석을 위한\n새로운 플랫폼";
+export default function AboutDescription() {
+  const completedSubTitle = "TubeAna로 경험해보세요!";
   const [landingTitle, setLandingTitle] = useState("");
   const [count, setCount] = useState(0);
 
@@ -20,16 +21,12 @@ export default function IntroSubTitle() {
         setCount((prev) => prev + 1);
         return result;
       });
-    }, 100);
+    }, 300);
 
     return () => {
       clearInterval(timer);
     };
   });
 
-  return (
-    <div className="leading-[3.5rem] inline animate-typingCursor">
-      {landingTitle}
-    </div>
-  );
+  return <div className={styles.description}>{landingTitle}</div>;
 }

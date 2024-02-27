@@ -1,6 +1,3 @@
-import Image from "next/image";
-import bgImage from "../../assets/bg-analysis.jpg";
-import IntroSubTitle from "./IntroSubTitle";
 import styles from "../../styles/intro.module.scss";
 import IntroScrollArrow from "./IntroScrollArrow";
 

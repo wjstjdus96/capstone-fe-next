@@ -17,7 +17,7 @@ export default function MainPageClient({ children }: { children: any }) {
   });
   return (
     <>
-      <Intro onClickEnter={moveToEnter} />
+      {/* <Intro onClickEnter={moveToEnter} /> */}
       <About />
       <Description />
       <Enter enterRef={enterRef} />
