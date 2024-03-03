@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/Header";
 import DashBoardBody from "@/components/dashboard/DashBoardBody";
 import DashBoardHead from "@/components/dashboard/DashBoardHead";

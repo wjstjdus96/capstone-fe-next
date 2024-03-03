@@ -1,9 +1,21 @@
+import { useIsVisible } from "@/hooks/useIsVisible";
 import styles from "../../styles/intro.module.scss";
 import IntroScrollArrow from "./IntroScrollArrow";
 
-export default function Intro({ onClickEnter }: { onClickEnter: () => void }) {
+interface IIntro {
+  onClickEnter: () => void;
+  element: HTMLDivElement | null;
+  isVisible: boolean;
+}
+
+export default function Intro({ onClickEnter }: IIntro) {
+  const { element, isVisible } = useIsVisible({
+    options: { rootMargin: "0px", threshold: 0.7 },
+    initialVisible: true,
+  });
+
   return (
-    <div className={styles.wrapper}>
+    <div ref={element} className={styles.wrapper}>
       <div className={styles.titleBox}>
         <h1 className={styles.subTitle}>
           유튜브 댓글 분석을 위한 새로운 플랫폼
@@ -14,7 +26,9 @@ export default function Intro({ onClickEnter }: { onClickEnter: () => void }) {
         <span>분석하러 가기</span>
         <div className={styles.buttonWave}></div>
       </button>
-      <div className={styles.scrollWrapper}>
+      <div
+        className={`${isVisible && styles.isVisible} ${styles.scrollWrapper}`}
+      >
         <IntroScrollArrow />
       </div>
     </div>
