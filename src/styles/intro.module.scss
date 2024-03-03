@@ -117,6 +117,7 @@ $light: #e8e8e9;
   position: absolute;
   bottom: 0;
   opacity: 0;
+  animation: revealOpacity 300ms linear forwards (($delay) + $delay * 3) + ms;
   & > div {
     position: relative;
     height: 100px;
@@ -124,7 +125,7 @@ $light: #e8e8e9;
 }
 
 .isVisible {
-  animation: revealOpacity 300ms linear forwards (($delay) + $delay * 3) + ms;
+  // opacity: 1;
 }
 
 .scrollArrow {

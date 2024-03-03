@@ -4,16 +4,11 @@ import IntroScrollArrow from "./IntroScrollArrow";
 
 interface IIntro {
   onClickEnter: () => void;
-  element: HTMLDivElement | null;
+  element: any;
   isVisible: boolean;
 }
 
-export default function Intro({ onClickEnter }: IIntro) {
-  const { element, isVisible } = useIsVisible({
-    options: { rootMargin: "0px", threshold: 0.7 },
-    initialVisible: true,
-  });
-
+export default function Intro({ onClickEnter, element, isVisible }: IIntro) {
   return (
     <div ref={element} className={styles.wrapper}>
       <div className={styles.titleBox}>

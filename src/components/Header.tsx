@@ -4,7 +4,7 @@ import { IHeader } from "@/types/components";
 import { useRouter, usePathname } from "next/navigation";
 import styles from "../styles/header.module.scss";
 
-export default function Header() {
+export default function Header({ isVisible }: { isVisible: boolean }) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${!isVisible && styles.isVisible}`}>
       <h2 onClick={onClickHome}>TubeAna</h2>
     </div>
   );
