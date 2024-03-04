@@ -18,8 +18,10 @@ export const useIsVisible = (props: UseIsVisiblePropsType) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          console.log("보임");
         } else {
           setIsVisible(false);
+          console.log("안 보임");
         }
       });
     };
