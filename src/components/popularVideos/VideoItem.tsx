@@ -6,20 +6,21 @@ export default function VideoItem({ item, idx }: { item: any; idx: number }) {
       <div className={styles.videoItemDefault}>
         <h1>#{idx}</h1>
         <h2>{item.title}</h2>
+        <button>분석하기</button>
       </div>
       <div className={styles.videoItemExpanded}>
         <img src={item.thumbnails.medium.url} />
         <div className={styles.videoItemDetailWrapper}>
+          <p>{item.channelTitle}</p>
+          <p>{item.publishedAt.slice(0, 10)}</p>
           <div>
-            <p>channel. {item.channelTitle}</p>
-            <p>{item.publishedAt.slice(0, 10)}</p>
-          </div>
-          <div>
-            {item.tags?.slice(0, 10).map((tag: string) => (
-              <p>#{tag}</p>
+            {item.tags?.slice(0, 6).map((tag: string) => (
+              <p>
+                <span>#</span> &nbsp;
+                {tag}
+              </p>
             ))}
           </div>
-          <p>분석하기</p>
         </div>
       </div>
     </li>
