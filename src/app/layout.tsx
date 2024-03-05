@@ -1,5 +1,5 @@
 import { DataContextProvider } from "@/contexts/analysisData";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import Header from "@/components/Header";
 
 export const metadata = {
@@ -15,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
         <DataContextProvider>{children}</DataContextProvider>
       </body>
     </html>

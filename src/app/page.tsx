@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import MainPageClient from "@/components/MainPageClient";
 import PopularVideos from "@/components/popularVideos/PopularVideos ";
 

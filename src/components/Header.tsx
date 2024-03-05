@@ -2,12 +2,9 @@
 
 import { IHeader } from "@/types/components";
 import { useRouter, usePathname } from "next/navigation";
+import styles from "../styles/header.module.scss";
 
-export default function Header({
-  onClickAbout,
-  onClickEnter,
-  onClickDescription,
-}: IHeader) {
+export default function Header({ isVisible }: { isVisible: boolean }) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -17,10 +14,8 @@ export default function Header({
   };
 
   return (
-    <div className="fixed top-0 w-full h-[50px] z-10 px-[5rem] font-notoKR flex items-center justify-between bg-white shadow-lg">
-      <div className="font-bold text-2xl cursor-pointer" onClick={onClickHome}>
-        TubeAna
-      </div>
+    <div className={`${styles.wrapper} ${!isVisible && styles.isVisible}`}>
+      <h2 onClick={onClickHome}>TubeAna</h2>
     </div>
   );
 }

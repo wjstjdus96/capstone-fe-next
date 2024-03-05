@@ -3,6 +3,7 @@
 import { useAnalysisData } from "@/contexts/analysisData";
 import { IExampleBtn } from "@/types/components";
 import { useRouter } from "next/navigation";
+import styles from "../../styles/enter.module.scss";
 
 export default function ExampleBtn({ data }: IExampleBtn) {
   const router = useRouter();
@@ -16,9 +17,9 @@ export default function ExampleBtn({ data }: IExampleBtn) {
   return (
     <li
       onClick={() => onClickButton(data.videoId)}
-      className="py-[0.3rem] px-[1rem] bg-[#F2E8C6] rounded-3xl text-[#D83636] cursor-pointer hover:shadow-lg hover:scale-125 transition-all ease-in"
+      className={styles.exampleBtn}
     >
-      <p className="font-bold">예시 {data.videoId}</p>
+      <p>예시 {data.videoId}</p>
     </li>
   );
 }

@@ -311,8 +311,8 @@ export const analysis_data: IAnalysisData[] = [
 ];
 
 export const about_card_list = [
-  { cardBody: "영상에 대한 자세한 피드백을 받고 싶으신가요?" },
-  { cardBody: "구독자가 많아 댓글을 하나하나 보기 힘드신가요?" },
-  { cardBody: "댓글의 실시간 분위기를 보고 싶으신가요?" },
-  { cardBody: "비슷한 다른 영상의 분석 결과를 얻고 싶으신가요?" },
+  { cardBody: `영상에 대한&nbsp;<b>자세한 피드백</b>을 받고 싶으신가요?` },
+  { cardBody: "구독자가 많아 &nbsp;<b>댓글을 하나하나</b> 보기 힘드신가요?" },
+  { cardBody: "댓글의 &nbsp;<b>실시간 분위기</b>를 보고 싶으신가요?" },
+  { cardBody: "<b>비슷한 다른 영상</b>의 분석 결과를 얻고 싶으신가요?" },
 ];

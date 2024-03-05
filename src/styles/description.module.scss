@@ -1,0 +1,72 @@
+.wrapper {
+  background-color: #1d809f;
+  padding-top: 50px;
+  padding: 2rem;
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.cardListWrapper {
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.cardWrapper {
+  perspective: 1000px;
+  padding: 2.5rem 1rem;
+  margin: 0 0.5rem;
+  &:hover {
+    .cardTransform {
+      transform: rotateY(-180deg);
+    }
+  }
+}
+
+.cardTransform {
+  transform-style: preserve-3d;
+  transition-duration: 500ms;
+  height: 16rem;
+  position: relative;
+  transform: rotateY(0);
+}
+
+.cardFront {
+  backface-visibility: hidden;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5rem;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1d809f;
+  }
+}
+
+.cardBack {
+  backface-visibility: hidden;
+  position: absolute;
+  transform: rotateY(-180deg);
+  background-color: #8ebfcf;
+  height: 100%;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    padding: 0 1rem;
+  }
+}
