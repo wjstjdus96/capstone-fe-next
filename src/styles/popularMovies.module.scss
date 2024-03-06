@@ -31,6 +31,7 @@
     }
     .videoItemDefault > button {
       opacity: 1;
+      visibility: visible;
     }
   }
 }
@@ -47,14 +48,13 @@
 
   button {
     position: absolute;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: white;
     right: -5.2rem;
-    opacity: 0;
+    visibility: hidden;
     transition: 0.35s;
     background-image: linear-gradient(transparent 60%, #d83636 40%);
-    // background-image: linear-gradient(transparent calc(100% - 3px), #000 3px);
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size 0.3s;

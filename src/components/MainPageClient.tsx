@@ -23,14 +23,14 @@ export default function MainPageClient({ children }: IMainPageClient) {
   return (
     <>
       <Header isVisible={isVisible} />
-      {/* <Intro
+      <Intro
         element={element}
         isVisible={isVisible}
         onClickEnter={moveToEnter}
       />
       <About />
       <Description />
-      <Enter enterRef={enterRef} /> */}
+      <Enter enterRef={enterRef} />
       {children}
     </>
   );

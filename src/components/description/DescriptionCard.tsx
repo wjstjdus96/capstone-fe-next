@@ -9,8 +9,10 @@ export default function DescriptionCard({
   description: IDescription;
   idx: number;
 }) {
+  const dynamicClassName = `cardBody_${idx}`;
+
   return (
-    <div className={styles.cardWrapper}>
+    <div className={`${styles.cardWrapper}  ${styles[dynamicClassName]}`}>
       <div className={styles.cardTransform}>
         <div className={styles.cardFront}>
           <h2>{description.name}</h2>

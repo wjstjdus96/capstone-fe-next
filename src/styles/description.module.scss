@@ -1,5 +1,6 @@
 .wrapper {
   background-color: #1d809f;
+  height: 35rem;
   padding-top: 50px;
   padding: 2rem;
   color: white;
@@ -20,6 +21,8 @@
   perspective: 1000px;
   padding: 2.5rem 1rem;
   margin: 0 0.5rem;
+  opacity: 0;
+  animation: flipCard 400ms linear forwards;
   &:hover {
     .cardTransform {
       transform: rotateY(-180deg);
@@ -68,5 +71,21 @@
 
   h5 {
     padding: 0 1rem;
+  }
+}
+
+@for $i from 0 through 6 {
+  .cardBody_#{$i} {
+    animation-delay: $i * 0.1s;
+  }
+}
+
+@keyframes flipCard {
+  from {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  to {
+    opacity: 1;
   }
 }
