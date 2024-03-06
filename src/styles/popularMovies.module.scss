@@ -1,6 +1,6 @@
 .popluarVideosWrapper {
   padding-top: 50px;
-  background-color: #fcbf49;
+  background-color: #36d876;
   padding: 2rem;
 }
 
@@ -54,7 +54,7 @@
     right: -5.2rem;
     visibility: hidden;
     transition: 0.35s;
-    background-image: linear-gradient(transparent 60%, #d83636 40%);
+    background-image: linear-gradient(transparent 60%, #72e59f 40%);
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size 0.3s;
@@ -100,13 +100,13 @@
     overflow: hidden;
     p {
       font-size: 0.8rem;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.674);
       padding: 0.1rem 0.5rem;
       border-radius: 1rem;
     }
     p > span {
       font-weight: 900;
-      color: #fcbf49;
+      color: #36d876;
     }
   }
 }

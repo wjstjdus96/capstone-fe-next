@@ -17,7 +17,7 @@ export default function About() {
         {about_card_list.map((card, index) => (
           <div key={index} className={styles.card}>
             <div
-              className={`cardBody_${index} ${index % 2 == 0 && styles.right} ${
+              className={`${index % 2 == 0 && styles.right} ${
                 isVisible && styles.animation
               }`}
               dangerouslySetInnerHTML={{ __html: card.cardBody }}
