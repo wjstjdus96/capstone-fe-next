@@ -10,6 +10,7 @@ export default function AboutDescription({
   const [landingTitle, setLandingTitle] = useState("");
   const [count, setCount] = useState(0);
   const savedCallback = useRef<any>();
+  const visibelRef = useRef<boolean>();
 
   const callback = () => {
     if (count < completedText.length) {
@@ -23,6 +24,7 @@ export default function AboutDescription({
 
   useEffect(() => {
     savedCallback.current = callback;
+    visibelRef.current = isVisible;
   });
 
   useEffect(() => {
@@ -34,13 +36,15 @@ export default function AboutDescription({
       const typingInterval = setInterval(() => {
         typing();
 
-        if (!isVisible) {
+        if (!visibelRef.current) {
           clearInterval(typingInterval);
+          setCount(0);
+          setLandingTitle("");
         }
       }, 100);
 
       return () => clearInterval(typingInterval);
-    }, 2200);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, [isVisible]);
