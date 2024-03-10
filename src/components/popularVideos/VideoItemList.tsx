@@ -17,7 +17,7 @@ export const VideoItemList = async () => {
   return (
     <ul className={styles.videoListWrapper}>
       {data.items.map((item: any, idx: number) => (
-        <VideoItem item={item.snippet} idx={idx + 1} />
+        <VideoItem key={idx} item={item.snippet} idx={idx + 1} />
       ))}
     </ul>
   );
