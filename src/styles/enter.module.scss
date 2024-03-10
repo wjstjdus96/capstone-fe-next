@@ -39,6 +39,7 @@
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  opacity: 0;
 
   h4 {
     color: #f2e8c6;
@@ -46,10 +47,13 @@
   }
 }
 
+.exampleAnimation {
+  animation: fadeInUp 1s forwards;
+}
+
 .exampleBtnWrapper {
   display: flex;
   gap: 1.5rem;
-  animation: fadeInUp 1s;
 }
 
 .exampleBtn {

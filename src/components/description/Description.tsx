@@ -5,7 +5,7 @@ import { useIsVisible } from "@/hooks/useIsVisible";
 
 export default function Description() {
   const { element, isVisible } = useIsVisible({
-    options: { rootMargin: "0px", threshold: 0.2 },
+    options: { rootMargin: "0px", threshold: 0.5 },
     initialVisible: true,
   });
 

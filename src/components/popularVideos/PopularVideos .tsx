@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-import VideoItemList from "./VideoItemList";
 import styles from "../../styles/popularMovies.module.scss";
+import VideoItemList from "./VideoItemList";
 
 export default function PopularVideos() {
   return (

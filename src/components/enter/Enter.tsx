@@ -1,14 +1,22 @@
 import { analysis_data } from "@/const/data";
 import ExampleBtn from "./ExampleBtn";
 import styles from "../../styles/enter.module.scss";
+import { useIsVisible } from "@/hooks/useIsVisible";
 
-export default function Enter({
-  enterRef,
-}: {
-  enterRef: React.ForwardedRef<HTMLDivElement>;
-}) {
+export default function Enter({ enterRef }: { enterRef: any }) {
+  const { element, isVisible } = useIsVisible({
+    options: { rootMargin: "0px", threshold: 0.8 },
+    initialVisible: true,
+  });
+
   return (
-    <div ref={enterRef} className={styles.wrapper}>
+    <div
+      ref={(el) => {
+        enterRef!.current = el;
+        element.current = el;
+      }}
+      className={styles.wrapper}
+    >
       <div className={styles.title}>분석해보세요!</div>
       <div className={styles.inputWrapper}>
         <h2>영상의 URL을 입력해주세요</h2>
@@ -19,7 +27,11 @@ export default function Enter({
           required
         />
       </div>
-      <div className={styles.exampleWrapper}>
+      <div
+        className={`${styles.exampleWrapper} ${
+          isVisible && styles.exampleAnimation
+        }`}
+      >
         <h4>
           # 현재 프론트엔드만 구현된 상태로 결과물은 예시를 통해서 확인해주세요
         </h4>
