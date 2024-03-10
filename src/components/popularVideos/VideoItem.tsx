@@ -14,8 +14,8 @@ export default function VideoItem({ item, idx }: { item: any; idx: number }) {
           <p>{item.channelTitle}</p>
           <p>{item.publishedAt.slice(0, 10)}</p>
           <div>
-            {item.tags?.slice(0, 6).map((tag: string) => (
-              <p>
+            {item.tags?.slice(0, 6).map((tag: string, idx: number) => (
+              <p key={idx}>
                 <span>#</span> &nbsp;
                 {tag}
               </p>
