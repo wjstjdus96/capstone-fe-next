@@ -39,11 +39,16 @@
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  opacity: 0;
 
   h4 {
     color: #f2e8c6;
     font-size: 1.1rem;
   }
+}
+
+.exampleAnimation {
+  animation: fadeInUp 1s forwards;
 }
 
 .exampleBtnWrapper {
@@ -67,5 +72,16 @@
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     transform: scale(1.25);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
   }
 }
