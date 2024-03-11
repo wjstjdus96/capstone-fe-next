@@ -1,25 +1,17 @@
-"use client"; // 에러 컴포넌트는 반드시 클라이언트 컴포넌트여야 합니다
+"use client";
 
 import { useEffect } from "react";
 import { FallbackProps } from "react-error-boundary";
 
 export default function Error({ error, resetErrorBoundary }: FallbackProps) {
   useEffect(() => {
-    // 에러 리포트 서비스에 에러를 기록합니다
     console.error(error);
   }, [error]);
 
   return (
     <div>
-      <h2>Something went wrong!</h2>
-      <button
-        onClick={
-          // 세그먼트를 리렌더링하여 에러로부터 리커버링을 시도합니다
-          () => resetErrorBoundary()
-        }
-      >
-        Try again
-      </button>
+      <h2>에러 발생</h2>
+      <button onClick={() => resetErrorBoundary()}>Try again</button>
     </div>
   );
 }
