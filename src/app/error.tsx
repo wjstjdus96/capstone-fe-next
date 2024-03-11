@@ -10,7 +10,7 @@ export default function Error({ error, resetErrorBoundary }: FallbackProps) {
 
   return (
     <div>
-      <h2>에러 발생</h2>
+      <h2>에러가 발생하였습니다.</h2>
       <button onClick={() => resetErrorBoundary()}>Try again</button>
     </div>
   );
