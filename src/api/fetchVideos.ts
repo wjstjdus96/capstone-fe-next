@@ -2,7 +2,6 @@ export const fetchVideos = async () => {
   const res = await fetch(
     "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=KR&key=AIzaSyC6yTlfN6VPRPV9VYV9C_VVwQLDvK78sUg",
     {
-      method: "GET",
       cache: "no-store",
     }
   );

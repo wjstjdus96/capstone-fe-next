@@ -3,15 +3,13 @@ import styles from "../../styles/popularMovies.module.scss";
 import { fetchVideos } from "@/api/fetchVideos";
 
 export const VideoItemList = async () => {
-  console.log("mount");
   const data = await fetchVideos();
 
   return (
     <ul className={styles.videoListWrapper}>
-      {data &&
-        data.items.map((item: any, idx: number) => (
-          <VideoItem key={idx} item={item.snippet} idx={idx + 1} />
-        ))}
+      {data?.items?.map((item: any, idx: number) => (
+        <VideoItem key={idx} item={item.snippet} idx={idx + 1} />
+      ))}
     </ul>
   );
 };
