@@ -9,11 +9,7 @@ import Intro from "./intro/Intro";
 import { useIsVisible } from "@/hooks/useIsVisible";
 import Header from "./Header";
 
-interface IMainPageClient {
-  children: any;
-}
-
-export default function MainPageClient({ children }: IMainPageClient) {
+export default function MainPageClient() {
   const { element: enterRef, onMoveToElement: moveToEnter } = useMoveScroll();
   const { element, isVisible } = useIsVisible({
     options: { rootMargin: "0px", threshold: 0.8 },
@@ -31,7 +27,6 @@ export default function MainPageClient({ children }: IMainPageClient) {
       <About />
       <Description />
       <Enter enterRef={enterRef} />
-      {children}
     </>
   );
 }
