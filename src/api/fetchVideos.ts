@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 export const fetchVideos = async () => {
   const res = await fetch(
     `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&regionCode=KR&key=${process.env.YOUTUBE_API_KEY}`,
