@@ -1,20 +1,16 @@
-.popluarVideosWrapper {
-  padding-top: 50px;
-  background-color: #36d876;
-  padding: 2rem;
-}
+@import "../styles/mixins";
+@import "../styles/common";
 
-.title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: white;
+$wrapperBgColor: #36d876;
+$delay: 0.1s;
+
+.popluarVideosWrapper {
+  @include wrapper-default($wrapperBgColor);
 }
 
 .videoListWrapper {
   margin: 3rem 8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-column-center;
 }
 
 .videoItemWrapper {
@@ -38,7 +34,6 @@
 
 .videoItemDefault {
   display: flex;
-  display: relative;
   gap: 1rem;
   padding: 1rem 2rem;
   position: relative;
@@ -106,7 +101,7 @@
     }
     p > span {
       font-weight: 900;
-      color: #36d876;
+      color: $wrapperBgColor;
     }
   }
 }

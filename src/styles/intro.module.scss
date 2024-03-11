@@ -1,3 +1,6 @@
+@import "../styles/mixins";
+@import "../styles/common";
+
 $lines: 3;
 $duration: 1000;
 $delay: 400;
@@ -8,11 +11,9 @@ $dark: #1c1b21;
 $light: #e8e8e9;
 
 .wrapper {
+  @include flex-center;
   height: 100vh;
   color: $light;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   position: relative;
 
@@ -124,10 +125,6 @@ $light: #e8e8e9;
   }
 }
 
-.isVisible {
-  // opacity: 1;
-}
-
 .scrollArrow {
   span {
     position: absolute;
@@ -143,16 +140,12 @@ $light: #e8e8e9;
     opacity: 0;
     box-sizing: border-box;
   }
-  span:nth-of-type(1) {
-    animation-delay: 0s;
-  }
-  span:nth-of-type(2) {
-    top: 16px;
-    animation-delay: 0.15s;
-  }
-  span:nth-of-type(3) {
-    top: 32px;
-    animation-delay: 0.3s;
+
+  @for $i from 0 through 3 {
+    span:nth-of-type(#{$i + 1}) {
+      top: 16px * $i;
+      animation-delay: 0.15s * $i;
+    }
   }
 }
 
