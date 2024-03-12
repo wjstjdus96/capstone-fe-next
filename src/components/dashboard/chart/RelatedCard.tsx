@@ -5,7 +5,11 @@ export default function RelatedCard({ id, thumbnail, title }: IRelationVideo) {
   return (
     <div className="flex flex-col items-center">
       <figure className="w-[240px] h-[134px] mb-8 overflow-hidden rounded-lg">
-        <img className="w-full h-full object-cover" src={thumbnail} />
+        <img
+          className="w-full h-full object-cover"
+          src={thumbnail}
+          alt={`${title} 영상 썸네일`}
+        />
       </figure>
       <p className="text-sm mb-[1rem] px-[1rem]">{title}</p>
       <div className="text-xs">

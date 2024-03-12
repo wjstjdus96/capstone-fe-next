@@ -9,7 +9,10 @@ export default function VideoItem({ item, idx }: { item: any; idx: number }) {
         <button>분석하기</button>
       </article>
       <article className={styles.videoItemExpanded}>
-        <img src={item.thumbnails.medium.url} />
+        <img
+          src={item.thumbnails.medium.url}
+          alt={`${item.title} 영상 썸네일`}
+        />
         <div className={styles.videoItemDetailWrapper}>
           <p>{item.channelTitle}</p>
           <p>{item.publishedAt.slice(0, 10)}</p>

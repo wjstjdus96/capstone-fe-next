@@ -10,7 +10,11 @@ export default function DashBoardHead() {
   return (
     <section className=" pt-[8rem] pb-[1rem] px-[8rem]  bg-[#3A4458] text-white">
       <div className="flex gap-[2rem]">
-        <img className="w-[20rem] object-cover " src={analysisData.thumbnail} />
+        <img
+          className="w-[20rem] object-cover "
+          src={analysisData.thumbnail}
+          alt={`${analysisData.title} 영상 썸네일`}
+        />
         <section>
           <h3 className="text-[1.4rem] mb-[0.3rem] font-semibold">
             {analysisData.title}
@@ -29,9 +33,9 @@ export default function DashBoardHead() {
         </section>
       </div>
       <figure className="mt-[3rem] flex justify-center items-center">
-        <Image src={arrow} alt="아래로 향하는 표시" width={30} />
+        <Image src={arrow} alt="아래로 향하는 화살표" width={30} />
         <div>이 영상에 대한 분석 내용</div>
-        <Image src={arrow} alt="아래로 향하는 표시" width={30} />
+        <Image src={arrow} alt="아래로 향하는 화살표" width={30} />
       </figure>
     </section>
   );
