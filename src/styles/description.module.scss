@@ -46,7 +46,7 @@ $delay: 0.1s;
   width: 100%;
   border-radius: 1.5rem;
 
-  h2 {
+  h4 {
     font-size: 1.3rem;
     font-weight: 700;
     color: $wrapperBgColor;
@@ -58,11 +58,13 @@ $delay: 0.1s;
   position: absolute;
   transform: rotateY(-180deg);
   background-color: #8ebfcf;
+  color: white;
   height: 100%;
+  width: 100%;
   border-radius: 1.5rem;
   @include flex-center;
 
-  h5 {
+  p {
     padding: 0 1rem;
   }
 }

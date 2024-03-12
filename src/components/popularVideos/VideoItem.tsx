@@ -3,12 +3,12 @@ import styles from "../../styles/popularMovies.module.scss";
 export default function VideoItem({ item, idx }: { item: any; idx: number }) {
   return (
     <li className={styles.videoItemWrapper}>
-      <div className={styles.videoItemDefault}>
-        <h1>#{idx}</h1>
-        <h2>{item.title}</h2>
+      <article className={styles.videoItemDefault}>
+        <h4>#{idx}</h4>
+        <h6>{item.title}</h6>
         <button>분석하기</button>
-      </div>
-      <div className={styles.videoItemExpanded}>
+      </article>
+      <article className={styles.videoItemExpanded}>
         <img src={item.thumbnails.medium.url} />
         <div className={styles.videoItemDetailWrapper}>
           <p>{item.channelTitle}</p>
@@ -22,7 +22,7 @@ export default function VideoItem({ item, idx }: { item: any; idx: number }) {
             ))}
           </div>
         </div>
-      </div>
+      </article>
     </li>
   );
 }

@@ -14,8 +14,8 @@ export default function Header({ isVisible }: { isVisible: boolean }) {
   };
 
   return (
-    <div className={`${styles.wrapper} ${!isVisible && styles.isVisible}`}>
+    <header className={`${styles.wrapper} ${!isVisible && styles.isVisible}`}>
       <h2 onClick={onClickHome}>TubeAna</h2>
-    </div>
+    </header>
   );
 }

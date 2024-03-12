@@ -49,5 +49,5 @@ export default function AboutDescription({
     return () => clearTimeout(timeout);
   }, [isVisible]);
 
-  return <div className={`${styles.description}`}>{landingTitle}</div>;
+  return <p className={`${styles.description}`}>{landingTitle}</p>;
 }

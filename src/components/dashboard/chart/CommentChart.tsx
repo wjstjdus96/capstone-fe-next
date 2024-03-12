@@ -62,10 +62,10 @@ export default function CommentChart({
                 className="w-full bg-white flex py-5 mr-10 rounded-3xl"
                 key={idx}
               >
-                <div className="px-6 py-3 font-medium text-gray-900">
+                <h5 className="px-6 py-3 font-medium text-gray-900">
                   {idx + 1}
-                </div>
-                <div className="px-6 py-3 text-sm">{comment}</div>
+                </h5>
+                <p className="px-6 py-3 text-sm">{comment}</p>
               </div>
             </SwiperSlide>
           ))}

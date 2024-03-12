@@ -10,21 +10,21 @@ export default function About() {
   });
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.title}>어떤 서비스인가요?</div>
+    <section className={styles.wrapper}>
+      <h1 className={styles.title}>어떤 서비스인가요?</h1>
       <div ref={cardListRef} className={styles.cardlist}>
         {about_card_list.map((card, index) => (
-          <div key={index} className={styles.card}>
-            <div
+          <li key={index} className={styles.card}>
+            <p
               className={`${index % 2 == 0 && styles.right} ${
                 isVisible && styles.animation
               }`}
               dangerouslySetInnerHTML={{ __html: card.cardBody }}
-            ></div>
-          </div>
+            ></p>
+          </li>
         ))}
       </div>
       <AboutDescription isVisible={isVisible} />
-    </div>
+    </section>
   );
 }

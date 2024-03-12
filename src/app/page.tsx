@@ -8,9 +8,9 @@ const PopularVideo = dynamic(
 
 export default function Home() {
   return (
-    <div className="h-full font-notoKR ">
+    <main className="h-full font-notoKR">
       <MainPageClient />
       <PopularVideo />
-    </div>
+    </main>
   );
 }

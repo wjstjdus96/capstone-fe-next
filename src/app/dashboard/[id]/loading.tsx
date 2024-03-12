@@ -4,11 +4,11 @@ export default function loading() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.headerBox} />
-      <div className={styles.spinnerBox}>
-        <div className={styles.spinnerCircle} />
-        <div className={styles.spinnerCircle} />
-        <div className={styles.spinnerCircle} />
-      </div>
+      <li className={styles.spinnerBox}>
+        <ul className={styles.spinnerCircle} />
+        <ul className={styles.spinnerCircle} />
+        <ul className={styles.spinnerCircle} />
+      </li>
     </div>
   );
 }

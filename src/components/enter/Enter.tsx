@@ -17,17 +17,17 @@ export default function Enter({ enterRef }: { enterRef: any }) {
       }}
       className={styles.wrapper}
     >
-      <div className={styles.title}>분석해보세요!</div>
-      <div className={styles.inputWrapper}>
-        <h2>영상의 URL을 입력해주세요</h2>
+      <h1 className={styles.title}>분석해보세요!</h1>
+      <section className={styles.inputWrapper}>
+        <h3>영상의 URL을 입력해주세요</h3>
         <input
           type="search"
           id="search"
           placeholder="분석하고 싶은 유튜브 영상 url을 입력하세요"
           required
         />
-      </div>
-      <div
+      </section>
+      <section
         className={`${styles.exampleWrapper} ${
           isVisible && styles.exampleAnimation
         }`}
@@ -40,7 +40,7 @@ export default function Enter({ enterRef }: { enterRef: any }) {
             <ExampleBtn key={idx} data={item} />
           ))}
         </ul>
-      </div>
+      </section>
     </div>
   );
 }

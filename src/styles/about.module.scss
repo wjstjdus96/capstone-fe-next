@@ -19,7 +19,7 @@ $wrapperBgColor: #fcbf49;
   height: 5rem;
   position: relative;
 
-  & > div {
+  & > p {
     width: 0;
     opacity: 0;
     background-color: white;
@@ -43,10 +43,6 @@ $wrapperBgColor: #fcbf49;
   .right {
     right: 0rem;
   }
-
-  & > span {
-    width: 5rem;
-  }
 }
 
 .description {
@@ -60,7 +56,7 @@ $wrapperBgColor: #fcbf49;
 }
 
 @for $i from 0 through 4 {
-  .cardlist div:nth-child(#{$i + 1}) div {
+  .cardlist li:nth-child(#{$i + 1}) p {
     animation-delay: $i * $delay;
   }
 }

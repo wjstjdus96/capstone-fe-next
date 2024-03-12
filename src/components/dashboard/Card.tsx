@@ -9,11 +9,11 @@ const flexRow: IFlexRow = {
 
 export default function Card({ title, children, basis }: ICard) {
   return (
-    <div className={flexRow[basis ? basis : 0]}>
-      <div className="px-4 py-3 bg-[#3A4458] rounded-t-lg font-bold text-[#F7F7F7]">
+    <article className={flexRow[basis ? basis : 0]}>
+      <h6 className="px-4 py-3 bg-[#3A4458] rounded-t-lg font-bold text-[#F7F7F7]">
         {title}
-      </div>
-      <div className="p-5 bg-[#F7F7F7] rounded-b-lg ">{children} </div>
-    </div>
+      </h6>
+      <figure className="p-5 bg-[#F7F7F7] rounded-b-lg ">{children} </figure>
+    </article>
   );
 }
