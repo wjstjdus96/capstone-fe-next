@@ -1,13 +1,13 @@
 "use client";
 
 import { useAnalysisData } from "@/contexts/analysisData";
-import Card from "./Card";
-import DoughnutChart from "./chart/DoughnutChart";
-import CommentChart from "./chart/CommentChart";
-import WordCloud from "./chart/WordCloudChart";
-import LineChart from "./chart/LineChart";
-import LikesTable from "./chart/LikesTable";
-import RelatedSlider from "./chart/RelatedSlider";
+import Card from "./BoardCard";
+import DoughnutChart from "../chart/DoughnutChart";
+import CommentChart from "../chart/CommentChart";
+import WordCloud from "../chart/WordCloudChart";
+import LineChart from "../chart/LineChart";
+import LikesTable from "../chart/LikesTable";
+import RelatedSlider from "../chart/RelatedSlider";
 
 export default function DashBoardBody() {
   const { analysisData } = useAnalysisData();
