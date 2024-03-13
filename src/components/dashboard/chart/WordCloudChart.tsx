@@ -55,9 +55,5 @@ export default function WordCloud({ keywords }: IWordCloud) {
     }
   });
 
-  return (
-    <div>
-      <div id="word-cloud"></div>
-    </div>
-  );
+  return <div id="word-cloud"></div>;
 }

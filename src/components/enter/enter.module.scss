@@ -1,27 +1,24 @@
-.wrapper {
-  height: 70vh;
-  padding-top: 50px;
-  background-color: #d83636;
-  padding: 2rem;
-  color: white;
-}
+@import "../../styles/mixins";
+@import "../../styles/common";
+@import "../../styles/common";
 
-.title {
-  font-size: 3rem;
-  font-weight: 700;
+$wrapperBgColor: #d83636;
+$wrapperHeight: 70vh;
+$delay: 0.1s;
+
+.wrapper {
+  @include wrapper-default($wrapperBgColor, $wrapperHeight);
 }
 
 .inputWrapper {
   margin: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column-center;
   gap: 2rem;
 
-  h2 {
+  h3 {
     font-size: 1.8rem;
     font-weight: 500;
+    color: white;
   }
 
   input {
@@ -34,10 +31,7 @@
 }
 
 .exampleWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column-center;
   gap: 1.5rem;
   opacity: 0;
 
@@ -60,7 +54,7 @@
   padding: 0.3rem 1rem;
   background-color: #f2e8c6;
   border-radius: 1.5rem;
-  color: #d83636;
+  color: $wrapperBgColor;
   cursor: pointer;
   transition: all ease-in 150ms;
 

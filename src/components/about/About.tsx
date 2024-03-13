@@ -1,6 +1,6 @@
-import { about_card_list } from "@/const/data";
 import { useIsVisible } from "@/hooks/useIsVisible";
-import styles from "../../styles/about.module.scss";
+import styles from "./about.module.scss";
+import AboutCardList from "./AboutCardList";
 import AboutDescription from "./AboutDescription";
 
 export default function About() {
@@ -10,21 +10,10 @@ export default function About() {
   });
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.title}>어떤 서비스인가요?</div>
-      <div ref={cardListRef} className={styles.cardlist}>
-        {about_card_list.map((card, index) => (
-          <div key={index} className={styles.card}>
-            <div
-              className={`${index % 2 == 0 && styles.right} ${
-                isVisible && styles.animation
-              }`}
-              dangerouslySetInnerHTML={{ __html: card.cardBody }}
-            ></div>
-          </div>
-        ))}
-      </div>
+    <section className={styles.wrapper}>
+      <h1 className={styles.title}>어떤 서비스인가요?</h1>
+      <AboutCardList cardListRef={cardListRef} isVisible={isVisible} />
       <AboutDescription isVisible={isVisible} />
-    </div>
+    </section>
   );
 }

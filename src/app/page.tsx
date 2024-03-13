@@ -1,6 +1,7 @@
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import MainPageClient from "@/components/MainPageClient";
 import dynamic from "next/dynamic";
+import styles from "../styles/home.module.scss";
 
 const PopularVideo = dynamic(
   () => import("../components/popularVideos/PopularVideos")
@@ -8,9 +9,9 @@ const PopularVideo = dynamic(
 
 export default function Home() {
   return (
-    <div className="h-full font-notoKR ">
+    <main className={styles.wrapper}>
       <MainPageClient />
       <PopularVideo />
-    </div>
+    </main>
   );
 }

@@ -1,6 +1,6 @@
 import { IDescription } from "@/types/components";
 import Image from "next/image";
-import styles from "../../styles/description.module.scss";
+import styles from "./description.module.scss";
 
 export default function DescriptionCard({
   description,
@@ -12,21 +12,21 @@ export default function DescriptionCard({
   const dynamicClassName = `cardBody_${idx}`;
 
   return (
-    <div className={`${styles.cardWrapper}  ${styles[dynamicClassName]}`}>
+    <li className={`${styles.cardWrapper}  ${styles[dynamicClassName]}`}>
       <div className={styles.cardTransform}>
-        <div className={styles.cardFront}>
-          <h2>{description.name}</h2>
+        <figure className={styles.cardFront}>
+          <h4>{description.name}</h4>
           <Image
             src={description.image}
             alt={description.name}
             width={90}
             height={90}
           />
-        </div>
+        </figure>
         <div className={styles.cardBack}>
-          <h5>{description.sub}</h5>
+          <p>{description.sub}</p>
         </div>
       </div>
-    </div>
+    </li>
   );
 }

@@ -1,5 +1,5 @@
 import VideoItem from "./VideoItem";
-import styles from "../../styles/popularMovies.module.scss";
+import styles from "./popularMovies.module.scss";
 import { fetchVideos } from "@/api/fetchVideos";
 
 export const VideoItemList = async () => {

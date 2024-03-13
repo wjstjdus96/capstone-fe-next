@@ -1,6 +1,6 @@
 import { description_list } from "@/const/data";
 import DescriptionCard from "./DescriptionCard";
-import styles from "../../styles/description.module.scss";
+import styles from "./description.module.scss";
 import { useIsVisible } from "@/hooks/useIsVisible";
 
 export default function Description() {
@@ -10,14 +10,14 @@ export default function Description() {
   });
 
   return (
-    <div ref={element} className={styles.wrapper}>
-      <div className={styles.title}>어떤 항목을 볼 수 있나요?</div>
-      <div className={styles.cardListWrapper}>
+    <section ref={element} className={styles.wrapper}>
+      <h1 className={styles.title}>어떤 항목을 볼 수 있나요?</h1>
+      <ul className={styles.cardListWrapper}>
         {isVisible &&
           description_list.map((item, idx) => (
             <DescriptionCard key={idx} idx={idx} description={item} />
           ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }

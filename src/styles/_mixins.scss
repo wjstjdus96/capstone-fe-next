@@ -1,0 +1,19 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin wrapper-default($bgColor, $height: auto) {
+  background-color: $bgColor;
+  height: $height;
+  padding-top: 50px;
+  padding: 2rem;
+}

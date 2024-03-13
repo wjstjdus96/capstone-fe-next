@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "../../styles/about.module.scss";
+import styles from "./about.module.scss";
 
 export default function AboutDescription({
   isVisible,
@@ -49,5 +49,5 @@ export default function AboutDescription({
     return () => clearTimeout(timeout);
   }, [isVisible]);
 
-  return <div className={`${styles.description}`}>{landingTitle}</div>;
+  return <p className={`${styles.description}`}>{landingTitle}</p>;
 }

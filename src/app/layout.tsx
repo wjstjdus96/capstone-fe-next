@@ -1,9 +1,7 @@
 import { DataContextProvider } from "@/contexts/analysisData";
 import "../styles/globals.scss";
-import Header from "@/components/Header";
 import { ErrorBoundary } from "react-error-boundary";
 import Error from "./error";
-import { error } from "console";
 
 export const metadata = {
   title: "TubeAna",

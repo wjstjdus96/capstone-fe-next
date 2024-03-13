@@ -1,0 +1,48 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.wrapper {
+  padding: 8rem 8rem 1rem;
+  background-color: $darkgray;
+  color: $white;
+}
+
+.videoInfoBox {
+  display: flex;
+  gap: 2rem;
+
+  & > img {
+    width: 20rem;
+    object-fit: cover;
+  }
+}
+
+.arrowWrapper {
+  margin-top: 3rem;
+  @include flex-center;
+}
+
+.videoInfoTitle {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+}
+
+.videoInfoOther {
+  display: flex;
+  gap: 0.8rem;
+  font-size: small;
+  margin-bottom: 1.2rem;
+}
+
+.videoCreatorBox {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  gap: 0.5rem;
+
+  & > img {
+    width: 1.5rem;
+    border-radius: 1.5rem;
+  }
+}

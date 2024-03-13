@@ -1,0 +1,66 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.wrapper {
+  padding: 2rem 10rem;
+  @include flex-column-center;
+  background-color: $white;
+}
+
+.boardRow {
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.boardRowFlex {
+  @extend .boardRow;
+  display: flex;
+}
+
+.firstRow {
+  height: 340px;
+  overflow: hidden;
+}
+
+.boardRowGrid {
+  @extend .boardRow;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cardTitle {
+  padding: 0.8rem 1.5rem;
+  background-color: $darkgray;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  font-weight: 700;
+  color: $white;
+}
+
+.cardWrapper {
+  width: auto;
+  height: auto;
+
+  & > figure {
+    padding: 1.2rem;
+    background-color: $lightwhite;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+}
+
+.cardWrapper2 {
+  @extend .cardWrapper;
+  flex-basis: 20%;
+}
+
+.cardWrapper5 {
+  @extend .cardWrapper;
+  flex-basis: 50%;
+}
+
+.cardWrapper8 {
+  @extend .cardWrapper;
+  flex-basis: 80%;
+}
