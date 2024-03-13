@@ -1,6 +1,6 @@
 import { description_list } from "@/const/data";
 import DescriptionCard from "./DescriptionCard";
-import styles from "../../styles/description.module.scss";
+import styles from "./description.module.scss";
 import { useIsVisible } from "@/hooks/useIsVisible";
 
 export default function Description() {

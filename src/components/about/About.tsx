@@ -1,5 +1,5 @@
 import { useIsVisible } from "@/hooks/useIsVisible";
-import styles from "../../styles/about.module.scss";
+import styles from "./about.module.scss";
 import AboutCardList from "./AboutCardList";
 import AboutDescription from "./AboutDescription";
 

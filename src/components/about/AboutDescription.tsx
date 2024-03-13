@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "../../styles/about.module.scss";
+import styles from "./about.module.scss";
 
 export default function AboutDescription({
   isVisible,

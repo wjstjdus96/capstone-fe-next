@@ -1,5 +1,5 @@
 import { analysis_data } from "@/const/data";
-import styles from "../../styles/enter.module.scss";
+import styles from "./enter.module.scss";
 import ExampleBtn from "./ExampleBtn";
 
 export default function EnterExample({ isVisible }: { isVisible: boolean }) {

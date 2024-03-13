@@ -1,4 +1,4 @@
-import styles from "../../styles/intro.module.scss";
+import styles from "./intro.module.scss";
 
 export default function IntroScrollArrow() {
   return (

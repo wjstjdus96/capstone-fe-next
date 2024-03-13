@@ -3,7 +3,7 @@
 import { useAnalysisData } from "@/contexts/analysisData";
 import { IExampleBtn } from "@/types/components";
 import { useRouter } from "next/navigation";
-import styles from "../../styles/enter.module.scss";
+import styles from "./enter.module.scss";
 
 export default function ExampleBtn({ data }: IExampleBtn) {
   const router = useRouter();

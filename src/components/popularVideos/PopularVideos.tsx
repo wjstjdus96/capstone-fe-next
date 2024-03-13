@@ -1,4 +1,4 @@
-import styles from "../../styles/popularMovies.module.scss";
+import styles from "./popularMovies.module.scss";
 import VideoItemList from "./VideoItemList";
 
 export default function PopularVideos() {

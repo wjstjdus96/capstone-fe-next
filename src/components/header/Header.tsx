@@ -2,7 +2,7 @@
 
 import { IHeader } from "@/types/components";
 import { useRouter, usePathname } from "next/navigation";
-import styles from "../styles/header.module.scss";
+import styles from "./header.module.scss";
 
 export default function Header({ isVisible }: { isVisible: boolean }) {
   const pathname = usePathname();

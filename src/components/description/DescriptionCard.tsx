@@ -1,6 +1,6 @@
 import { IDescription } from "@/types/components";
 import Image from "next/image";
-import styles from "../../styles/description.module.scss";
+import styles from "./description.module.scss";
 
 export default function DescriptionCard({
   description,

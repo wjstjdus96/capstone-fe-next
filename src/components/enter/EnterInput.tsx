@@ -1,4 +1,4 @@
-import styles from "../../styles/enter.module.scss";
+import styles from "./enter.module.scss";
 
 export default function EnterInput() {
   return (

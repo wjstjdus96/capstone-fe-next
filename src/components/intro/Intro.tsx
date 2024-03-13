@@ -1,5 +1,5 @@
 import { useIsVisible } from "@/hooks/useIsVisible";
-import styles from "../../styles/intro.module.scss";
+import styles from "./intro.module.scss";
 import IntroScrollArrow from "./IntroScrollArrow";
 
 interface IIntro {

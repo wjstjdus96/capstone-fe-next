@@ -1,4 +1,4 @@
-import styles from "../../styles/popularMovies.module.scss";
+import styles from "./popularMovies.module.scss";
 
 export default function VideoItem({ item, idx }: { item: any; idx: number }) {
   return (

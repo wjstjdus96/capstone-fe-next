@@ -1,5 +1,5 @@
 import { about_card_list } from "@/const/data";
-import styles from "../../styles/about.module.scss";
+import styles from "./about.module.scss";
 
 export default function AboutCardList({
   cardListRef,

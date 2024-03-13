@@ -1,5 +1,5 @@
 import { useIsVisible } from "@/hooks/useIsVisible";
-import styles from "../../styles/enter.module.scss";
+import styles from "./enter.module.scss";
 import EnterExample from "./EnterExample";
 import EnterInput from "./EnterInput";
 

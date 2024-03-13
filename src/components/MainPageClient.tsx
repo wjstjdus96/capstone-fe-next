@@ -7,7 +7,7 @@ import Description from "./description/Description";
 import Enter from "./enter/Enter";
 import Intro from "./intro/Intro";
 import { useIsVisible } from "@/hooks/useIsVisible";
-import Header from "./Header";
+import Header from "./header/Header";
 
 export default function MainPageClient() {
   const { element: enterRef, onMoveToElement: moveToEnter } = useMoveScroll();
