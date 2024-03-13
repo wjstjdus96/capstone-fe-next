@@ -3,18 +3,19 @@
 import { useAnalysisData } from "@/contexts/analysisData";
 import Card from "./BoardCard";
 import DoughnutChart from "../chart/DoughnutChart";
-import CommentChart from "../chart/CommentChart";
+import CommentChart from "../chart/commentChart/CommentChart";
 import WordCloud from "../chart/WordCloudChart";
 import LineChart from "../chart/LineChart";
-import LikesTable from "../chart/LikesTable";
-import RelatedSlider from "../chart/RelatedSlider";
+import LikesTable from "../chart/likesTable/LikesTable";
+import RelatedSlider from "../chart/relatedSlider/RelatedSlider";
+import styles from "./dashboardBody.module.scss";
 
 export default function DashBoardBody() {
   const { analysisData } = useAnalysisData();
 
   return (
-    <section className="px-40  flex flex-col items-center py-8 bg-white">
-      <section className="w-full h-[340px] flex gap-x-8 mb-8">
+    <section className={styles.wrapper}>
+      <section className={`${styles.boardRowFlex} ${styles.firstRow}`}>
         <Card title="긍정 부정 비율" basis={0.2}>
           <DoughnutChart percent={analysisData.percent} />
         </Card>
@@ -25,7 +26,7 @@ export default function DashBoardBody() {
           />
         </Card>
       </section>
-      <section className="w-full flex flex-row gap-x-8 mb-8">
+      <section className={styles.boardRowFlex}>
         <Card title="키워드" basis={0.2}>
           <WordCloud keywords={analysisData.keyword} />
         </Card>
@@ -33,11 +34,11 @@ export default function DashBoardBody() {
           <LineChart times={analysisData.time} />
         </Card>
       </section>
-      <section className="grid grid-cols-2  gap-x-8">
-        <Card title="좋아요 많은 댓글" basis={0.5}>
+      <section className={styles.boardRowGrid}>
+        <Card title="좋아요 많은 댓글">
           <LikesTable most_likes={analysisData.most_likes} />
         </Card>
-        <Card title="연관동영상" basis={0.5}>
+        <Card title="연관동영상">
           <RelatedSlider related={analysisData.relation_video} />
         </Card>
       </section>

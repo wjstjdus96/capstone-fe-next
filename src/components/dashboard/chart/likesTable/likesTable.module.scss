@@ -1,0 +1,33 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
+
+.wrapper {
+  height: 300px;
+  overflow-x: hidden;
+  border-radius: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  font-size: small;
+  text-align: left;
+  color: $darkgray;
+}
+
+.tr {
+  background-color: $purewhite;
+  border-bottom-width: 1px;
+  font-size: small;
+
+  & > td:first-child {
+    padding: 1.25rem 1.5rem;
+    @include flex-column-center;
+    gap: 0.3rem;
+    font-weight: 500;
+  }
+
+  & > td:last-child {
+    padding: 1rem 1.5rem;
+    line-height: 1.5rem;
+  }
+}

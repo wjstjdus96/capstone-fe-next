@@ -1,21 +1,17 @@
 import { IAnalysisData } from "@/types/data";
 import React from "react";
+import styles from "./dashboardHead.module.scss";
 
 function VideoDetails({ analysisData }: { analysisData: IAnalysisData }) {
   return (
     <section>
-      <h3 className="text-[1.4rem] mb-[0.3rem] font-semibold">
-        {analysisData.title}
-      </h3>
-      <div className="flex gap-[0.8rem] text-sm mb-[1.2rem]">
+      <h3 className={styles.videoInfoTitle}>{analysisData.title}</h3>
+      <div className={styles.videoInfoOther}>
         <p>조회수 {analysisData.views}</p>
         <p>{analysisData.uploadTime}</p>
       </div>
-      <section className="flex text-sm items-center gap-[0.5rem]">
-        <img
-          className="w-[1.5rem] rounded-full"
-          src={analysisData.profileImg}
-        />
+      <section className={styles.videoCreatorBox}>
+        <img src={analysisData.profileImg} />
         <h6>{analysisData.profileName}</h6>
       </section>
     </section>
